@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "980799268223",
+    "firebase_url": "https://testcell-16b4e-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "testcell-16b4e",
+    "storage_bucket": "testcell-16b4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980799268223:android:a7ac0d191a741945ec264a",
+        "android_client_info": {
+          "package_name": "com.example.testcell"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980799268223-nntghr14ulbc1cnn36qim55cg55t3sog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX-7zvCf7jxTWdf7unHJILzAortbsCLeY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980799268223-nntghr14ulbc1cnn36qim55cg55t3sog.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
