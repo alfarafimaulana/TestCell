@@ -219,7 +219,7 @@
             android:id="@+id/loc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="GET LOCATIONS" />
+            android:text="VIEW LOCATIONS" />
 
         <Button
             android:id="@+id/speed"

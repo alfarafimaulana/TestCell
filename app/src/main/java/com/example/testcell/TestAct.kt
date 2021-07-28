@@ -1,8 +1,10 @@
 package com.example.testcell
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.telephony.TelephonyManager
@@ -12,6 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.testcell.databinding.ActivityMainBinding
+import com.google.android.gms.common.util.Strings
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.database.DatabaseReference
@@ -58,13 +61,16 @@ class TestAct : AppCompatActivity() {
 
         val loc: Button = findViewById(R.id.loc)
         loc.setOnClickListener{
-            getLastLocation()
+            val longValue = long.text.toString()
+            val latValue = lat .text.toString()
+            viewLoc(latValue,longValue)
         }
 
         val refreshBtn: Button = findViewById(R.id.refresh)
         refreshBtn.setOnClickListener {
+            getLastLocation()
             timeStamp.text = timeStamp().toString()
-            operator.text = "Plese refresh"
+            operator()
             model()
 
 
@@ -72,7 +78,6 @@ class TestAct : AppCompatActivity() {
 
         val speedBtn: Button = findViewById(R.id.speed)
         speedBtn.setOnClickListener {
-
 
         }
 
@@ -102,6 +107,17 @@ class TestAct : AppCompatActivity() {
 
         val buildModel: TextView = findViewById(R.id.deviceModel)
         buildModel.text = build
+    }
+
+    fun viewLoc(latitude : String, longitude : String){
+        val lat = latitude
+        val long = longitude
+        val gmmIntentUri = Uri.parse("geo:$lat,$long")
+        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+        mapIntent.setPackage("com.google.android.apps.maps")
+        startActivity(mapIntent)
+
+
     }
 
 
