@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Bundle
 import android.telephony.TelephonyManager
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -17,9 +18,6 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.speedchecker.android.sdk.Public.SpeedTestListener
-import com.speedchecker.android.sdk.Public.SpeedTestResult
-import com.speedchecker.android.sdk.SpeedcheckerSDK
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -37,50 +35,50 @@ class TestAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_test)
+        setContentView(R.layout.activity_testone)
 
 
 
 
 
-        val timeStamp: TextView = findViewById(R.id.timeStamp)
-        val operator: TextView = findViewById(R.id.operator)
-        val buildModel: TextView = findViewById(R.id.deviceModel)
-        val long: TextView = findViewById(R.id.longitude)
-        val lat: TextView = findViewById(R.id.latitude)
-        val uploadView: TextView = findViewById(R.id.upload)
-        val downloadView: TextView = findViewById(R.id.download)
+        val timeStamp: EditText = findViewById(R.id.timeStamp)
+        val operator: EditText = findViewById(R.id.operator)
+        val buildModel: EditText = findViewById(R.id.deviceModel)
+        val long: EditText = findViewById(R.id.longitude)
+        val lat: EditText = findViewById(R.id.latitude)
+        val uploadView: EditText = findViewById(R.id.upload)
+        val downloadView: EditText = findViewById(R.id.download)
 
-        uploadView.text = "50"
-        downloadView.text = "100"
+        uploadView.setText("50")
+        downloadView.setText("100")
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
-        operator.text = "Plese refresh"
+        operator.setText("refresh")
 
-        val loc: Button = findViewById(R.id.loc)
+        val loc: Button = findViewById(R.id.loc2)
         loc.setOnClickListener{
             val longValue = long.text.toString()
             val latValue = lat .text.toString()
             viewLoc(latValue,longValue)
         }
 
-        val refreshBtn: Button = findViewById(R.id.refresh)
+        val refreshBtn: Button = findViewById(R.id.refresh2)
         refreshBtn.setOnClickListener {
             getLastLocation()
-            timeStamp.text = timeStamp().toString()
+            timeStamp.setText(timeStamp())
             operator()
             model()
 
 
         }
 
-        val speedBtn: Button = findViewById(R.id.speed)
+        val speedBtn: Button = findViewById(R.id.speed2)
         speedBtn.setOnClickListener {
 
         }
 
 
-        val sumbitBtn: Button = findViewById(R.id.submitData)
+        val sumbitBtn: Button = findViewById(R.id.submitData2)
         sumbitBtn.setOnClickListener {
             savedata()
         }
