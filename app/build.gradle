@@ -53,4 +53,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.speedchecker:android-sdk:4.2.118-demo-2'
     implementation 'androidx.multidex:multidex:2.0.1'
+    implementation project(':jspeedtest')
+
 }

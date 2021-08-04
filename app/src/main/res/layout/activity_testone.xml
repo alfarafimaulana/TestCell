@@ -7,6 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".TestAct">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/late"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/latency"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:enabled="false"
+            android:hint="Latency"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/speed2"
         android:layout_width="wrap_content"
@@ -27,7 +46,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+        app:layout_constraintTop_toBottomOf="@+id/late">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/upload"
@@ -45,7 +64,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+        app:layout_constraintTop_toBottomOf="@+id/late">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/download"
@@ -187,7 +206,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="8dp"
         android:text="refresh"
         app:layout_constraintBottom_toTopOf="@+id/speed2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -212,7 +231,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="32dp"
         android:text="View Locations"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
