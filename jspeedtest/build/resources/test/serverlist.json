@@ -1,0 +1,30 @@
+[
+  {
+    "mode": "download",
+    "uri": "http://ipv4.ikoula.testdebit.info/1M.iso"
+  },
+  {
+    "mode": "upload",
+    "uri": "http://ipv4.ikoula.testdebit.info/"
+  },
+  {
+    "mode": "download",
+    "uri": "http://mirror.internode.on.net/pub/speed/SpeedTest_16MB"
+  },
+  {
+    "mode": "download",
+    "uri": "http://speedtest.ftp.otenet.gr/files/test1Mb.db"
+  },
+  {
+    "mode": "download",
+    "uri": "ftp://speedtest:speedtest@ftp.otenet.gr/test1Mb.db"
+  },
+  {
+    "mode": "download",
+    "uri": "http://speedtest.serverius.net/files/10mb.bin"
+  },
+  {
+    "mode": "download",
+    "uri": "http://ovh.net/files/1Mb.dat"
+  }
+]
