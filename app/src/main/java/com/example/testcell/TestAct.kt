@@ -39,6 +39,7 @@ class TestAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_testone)
+        supportActionBar?.hide()
 
         telephonyManager = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
         telephonyManager!!.listen(myPhoneStateListener, PhoneStateListener.LISTEN_SIGNAL_STRENGTHS)
@@ -58,11 +59,10 @@ class TestAct : AppCompatActivity() {
         val uploadView: EditText = findViewById(R.id.upload)
         val downloadView: EditText = findViewById(R.id.download)
 
-        uploadView.setText("50")
-        downloadView.setText("100")
+
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
-        operator.setText("refresh")
+
 
         val loc: Button = findViewById(R.id.loc2)
         loc.setOnClickListener{

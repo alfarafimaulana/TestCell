@@ -6,30 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button1"
+    <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="530dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="153dp"
-        android:text="Automatic Test"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="31dp"
+        android:text='"User"'
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/testImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="16dp"
+        android:background="#2196F3"
+        app:layout_constraintEnd_toStartOf="@+id/groupHorizontal1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flask" />
+
+    <ImageView
+        android:id="@+id/opiniImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="90dp"
+        android:background="#2196F3"
+        app:layout_constraintStart_toEndOf="@+id/groupHorizontal1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/opini" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Test Otomatis"
+        app:layout_constraintEnd_toEndOf="@+id/testImage"
+        app:layout_constraintStart_toStartOf="@+id/testImage"
+        app:layout_constraintTop_toBottomOf="@+id/testImage" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupHorizontal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="134dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="134dp"
-        android:text="Your opinion"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="9dp"
+        android:text="Halo,"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Beri Opini"
+        app:layout_constraintEnd_toEndOf="@+id/opiniImage"
+        app:layout_constraintStart_toStartOf="@+id/opiniImage"
+        app:layout_constraintTop_toBottomOf="@+id/opiniImage" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bugFloating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="28dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/groupHorizontal1"
+        app:srcCompat="@drawable/bugfixes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

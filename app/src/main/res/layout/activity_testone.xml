@@ -14,6 +14,8 @@
         android:layout_height="55dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="41dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
 
@@ -41,11 +43,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout8"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="400px"
+        android:layout_width="150dp"
         android:layout_height="55dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/centerGroup2"
         app:layout_constraintTop_toBottomOf="@+id/late">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -59,11 +61,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="400px"
+        android:layout_width="150dp"
         android:layout_height="55dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/centerGroup2"
         app:layout_constraintTop_toBottomOf="@+id/late">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -120,11 +122,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout5"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="400px"
+        android:layout_width="150dp"
         android:layout_height="55dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/centerGroup2"
         app:layout_constraintTop_toBottomOf="@+id/Device">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -139,11 +141,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout4"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="400px"
+        android:layout_width="150dp"
         android:layout_height="55dp"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/centerGroup2"
         app:layout_constraintTop_toBottomOf="@+id/Device">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -236,5 +238,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/centerGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
