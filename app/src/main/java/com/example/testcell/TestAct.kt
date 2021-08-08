@@ -94,26 +94,26 @@ class TestAct : AppCompatActivity() {
         }
 
     }
-    private fun updateUploadSpeed(speed: BigDecimal) {
+    fun updateUploadSpeed(speed: BigDecimal) {
         this@TestAct.runOnUiThread {
             val uploadView: TextView = findViewById(R.id.upload)
             uploadView.text = speed.toInt().toString()
         }
     }
-    private fun updateDownloadSpeed(speed: BigDecimal) {
+    fun updateDownloadSpeed(speed: BigDecimal) {
         this@TestAct.runOnUiThread {
             val downloadView: TextView = findViewById(R.id.download)
             downloadView.text = speed.toInt().toString()
         }
     }
-    private fun updateLatency(latency: Int) {
+    fun updateLatency(latency: Int) {
         this@TestAct.runOnUiThread {
             val latencyView: TextView = findViewById(R.id.latency)
             latencyView.text = latency.toString()
         }
     }
 
-    private fun updateSignal(strengthVal: Int) {
+    fun updateSignal(strengthVal: Int) {
         val strengthView: TextView = findViewById(R.id.signal)
         strengthView.text = strengthVal.toString()
     }
@@ -171,7 +171,7 @@ class TestAct : AppCompatActivity() {
         }
     }
 
-    private fun savedata(){
+    fun savedata(){
         val timeStamp: TextView = findViewById(R.id.timeStamp)
         val operator: TextView = findViewById(R.id.operator)
         val buildModel: TextView = findViewById(R.id.deviceModel)
@@ -200,7 +200,7 @@ class TestAct : AppCompatActivity() {
 
         val data = Data(dataid.toString(),TimeStamp,Operator,Model,Longitude,Latitude,Signal,Latency,UploadSpeed,DownloadSpeed)
         database.child(dataid.toString()).setValue(data).addOnSuccessListener {
-            Toast.makeText(this, "Upload Success, Thanks For Your input",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Terima kasih atas masukannya",Toast.LENGTH_SHORT).show()
         }.addOnFailureListener {
             Toast.makeText(this, "Failed",Toast.LENGTH_SHORT).show()
         }
@@ -208,7 +208,7 @@ class TestAct : AppCompatActivity() {
 
 
 
-    private fun requestPermission() {
+    fun requestPermission() {
         ActivityCompat.requestPermissions(
             this,
             arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),

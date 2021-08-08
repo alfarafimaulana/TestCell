@@ -3,10 +3,9 @@
     package="com.example.testcell">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
 
     <application
         android:allowBackup="true"
@@ -15,10 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestCell">
+        <activity android:name=".bugReport"></activity>
         <activity
             android:name=".TestAct"
             android:label="@string/title_activity_test"
-            android:theme="@style/Theme.TestCell.NoActionBar"></activity>
+            android:theme="@style/Theme.TestCell.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

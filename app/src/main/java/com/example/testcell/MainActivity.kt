@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         val bug : FloatingActionButton = findViewById(R.id.bugFloating)
         bug.setOnClickListener{
-            Toast.makeText(this, "Coming Soon",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this,bugReport::class.java)
+            startActivity(intent)
         }
     }
 }
