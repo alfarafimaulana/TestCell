@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
@@ -22,12 +21,13 @@ class MainActivity : AppCompatActivity() {
 
         val opini : ImageView = findViewById(R.id.opiniImage)
         opini.setOnClickListener{
-            Toast.makeText(this, "Coming Soon",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this,opiniAct::class.java)
+            startActivity(intent)
         }
 
         val bug : FloatingActionButton = findViewById(R.id.bugFloating)
         bug.setOnClickListener{
-            val intent = Intent(this,bugReport::class.java)
+            val intent = Intent(this,bugReportAct::class.java)
             startActivity(intent)
         }
     }

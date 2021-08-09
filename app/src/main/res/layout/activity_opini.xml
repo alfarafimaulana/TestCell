@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bugReportAct">
+    tools:context=".opiniAct">
 
     <androidx.constraintlayout.widget.Group
-        android:id="@+id/centerGroupBugReport"
+        android:id="@+id/centerGroupOpini"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -18,64 +18,62 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Masalah"
+        android:id="@+id/opini"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="330dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/centerGroupBugReport"
-        app:layout_constraintStart_toStartOf="@+id/centerGroupBugReport"
-        app:layout_constraintTop_toBottomOf="@+id/textView13">
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/centerGroupOpini"
+        app:layout_constraintStart_toStartOf="@+id/centerGroupOpini"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBarOp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/laporanMasalah"
+            android:id="@+id/opiniDes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Jelaskan Masalahnya"
+            android:hint="Berikan Opinimu"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="120dp"
-        android:text="Model :"
-        android:textSize="24sp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="108dp"
+        android:text="Operator :"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/operatorOp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:text="Laporkan Masalah"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/deviceMBugReport"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
 
     <Button
-        android:id="@+id/tombolReport"
+        android:id="@+id/tombolOp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Kirim"
-        app:layout_constraintEnd_toEndOf="@+id/Masalah"
-        app:layout_constraintStart_toStartOf="@+id/Masalah"
-        app:layout_constraintTop_toBottomOf="@+id/Masalah" />
+        app:layout_constraintEnd_toEndOf="@+id/centerGroupOpini"
+        app:layout_constraintStart_toStartOf="@+id/centerGroupOpini"
+        app:layout_constraintTop_toBottomOf="@+id/opini" />
 
+    <RatingBar
+        android:id="@+id/ratingBarOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/centerGroupOpini"
+        app:layout_constraintStart_toStartOf="@+id/centerGroupOpini"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 </androidx.constraintlayout.widget.ConstraintLayout>

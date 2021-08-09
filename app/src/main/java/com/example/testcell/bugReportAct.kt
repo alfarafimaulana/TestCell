@@ -10,7 +10,7 @@ import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class bugReport : AppCompatActivity() {
+class bugReportAct : AppCompatActivity() {
     private lateinit var database : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +47,7 @@ class bugReport : AppCompatActivity() {
         val model = mod.text.toString()
         val complain = kom.text.toString()
 
-        val bug = reportData(dataid.toString(),model,complain)
+        val bug = dataReport(dataid.toString(),model,complain)
         database.child(dataid.toString()).setValue(bug).addOnSuccessListener {
             Toast.makeText(this, "Terima kasih atas masukannya", Toast.LENGTH_SHORT).show()
         }.addOnFailureListener {

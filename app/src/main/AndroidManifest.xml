@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestCell">
-        <activity android:name=".bugReport"></activity>
+        <activity android:name=".opiniAct"></activity>
+        <activity android:name=".bugReportAct" />
         <activity
             android:name=".TestAct"
             android:label="@string/title_activity_test"
