@@ -37,19 +37,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun timeKnown(){
-        var timeOfDay = timeStamp().toInt()
+        var timeOfDay = timeSecond().toInt()
         val timep : TextView = findViewById(R.id.waktuText)
-        if(timeOfDay >= 0 && timeOfDay < 12){
+        if(timeOfDay >= 0 && timeOfDay < 11){
             timep.text = "Selamat Pagi"
-        }else if(timeOfDay >= 12 && timeOfDay < 16){
+        }else if(timeOfDay >= 11 && timeOfDay < 17){
             timep.text = "Selamat Siang"
-        }else if(timeOfDay >= 16 && timeOfDay < 21){
+        }else if(timeOfDay >= 17 && timeOfDay < 20){
             timep.text = "Selamat Sore"
-        }else if(timeOfDay >= 21 && timeOfDay < 24){
+        }else if(timeOfDay >= 20 && timeOfDay < 24){
             timep.text = "Selamat Malam"
         }
     }
-    fun timeStamp(): String {
+    fun timeSecond(): String {
         val dateFormat = SimpleDateFormat("HH", Locale.US)
         return dateFormat.format(Date())
     }

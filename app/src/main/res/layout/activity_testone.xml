@@ -16,6 +16,9 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="41dp"
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
+        app:hintTextColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
@@ -26,6 +29,8 @@
             android:layout_height="50dp"
             android:enabled="false"
             android:hint="Latency"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,6 +53,8 @@
         android:layout_height="55dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/centerGroup2"
         app:layout_constraintTop_toBottomOf="@+id/late">
 
@@ -57,6 +64,8 @@
             android:layout_height="50dp"
             android:enabled="false"
             android:hint="Upload"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -66,6 +75,8 @@
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="15dp"
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/centerGroup2"
         app:layout_constraintTop_toBottomOf="@+id/late">
 
@@ -75,6 +86,7 @@
             android:layout_height="50dp"
             android:enabled="false"
             android:hint="Download"
+            android:textColor="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,6 +98,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
@@ -96,6 +110,8 @@
             android:layout_height="50dp"
             android:enabled="false"
             android:hint="Signal Strength"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,6 +123,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
@@ -117,6 +135,8 @@
             android:layout_height="50dp"
             android:enabled="false"
             android:hint="Operator"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,6 +147,8 @@
         android:layout_height="55dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/centerGroup2"
         app:layout_constraintTop_toBottomOf="@+id/Device">
 
@@ -136,6 +158,8 @@
             android:layout_height="50dp"
             android:enabled="false"
             android:hint="Longitude"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -146,6 +170,8 @@
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="15dp"
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/centerGroup2"
         app:layout_constraintTop_toBottomOf="@+id/Device">
 
@@ -155,6 +181,8 @@
             android:layout_height="50dp"
             android:enabled="false"
             android:hint="Latitude"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -166,6 +194,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Time">
@@ -176,6 +206,8 @@
             android:layout_height="50dp"
             android:enabled="false"
             android:hint="Device Model"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -187,6 +219,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="600dp"
+        android:textColorHint="#000000"
         app:boxStrokeColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -201,7 +234,8 @@
             android:enabled="false"
             android:hint="Time Stamp"
             android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColorHint="@color/black"
+            android:textColorLink="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
