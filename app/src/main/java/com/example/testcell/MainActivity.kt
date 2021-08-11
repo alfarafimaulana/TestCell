@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun timeKnown(){
-        var timeOfDay = Calendar.HOUR_OF_DAY
+        var timeOfDay = timeStamp().toInt()
         val timep : TextView = findViewById(R.id.waktuText)
         if(timeOfDay >= 0 && timeOfDay < 12){
             timep.text = "Selamat Pagi"
@@ -48,7 +49,8 @@ class MainActivity : AppCompatActivity() {
             timep.text = "Selamat Malam"
         }
     }
-
-
-
+    fun timeStamp(): String {
+        val dateFormat = SimpleDateFormat("HH", Locale.US)
+        return dateFormat.format(Date())
+    }
 }
