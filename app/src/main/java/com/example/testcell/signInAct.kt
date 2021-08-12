@@ -23,7 +23,7 @@ class signInAct : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup)
+        setContentView(R.layout.activity_signin)
         supportActionBar?.hide()
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -34,7 +34,7 @@ class signInAct : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
 
-        val signGoogle : ImageView = findViewById(R.id.signupGoogle)
+        val signGoogle : ImageView = findViewById(R.id.signIn)
         signGoogle.setOnClickListener {
             signIn()
 
