@@ -6,16 +6,39 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
 import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+
+    private lateinit var mAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
+
+        mAuth = FirebaseAuth.getInstance()
+        val currentUser = mAuth.currentUser
+        val namaUser : TextView = findViewById(R.id.namaUser)
+        val gambarUser : ImageView = findViewById(R.id.gambarUser)
+
+        //id_txt.text = currentUser?.uid
+        namaUser.text = currentUser?.displayName
+        //email_txt.text = currentUser?.email
+
+        Glide.with(this).load(currentUser?.photoUrl).into(gambarUser)
         timeKnown()
+
+
+        gambarUser.setOnClickListener {
+            val intent = Intent(this,profileUser::class.java)
+            startActivity(intent)
+        }
 
         val test : ImageView = findViewById(R.id.testImage)
         test.setOnClickListener{

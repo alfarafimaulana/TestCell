@@ -14,19 +14,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestCell">
-        <activity android:name=".opiniAct"></activity>
+        <activity android:name=".profileUser"></activity>
+        <activity android:name=".signInAct" />
+        <activity android:name=".firstSplash">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".opiniAct" />
         <activity android:name=".bugReportAct" />
         <activity
             android:name=".TestAct"
             android:label="@string/title_activity_test"
             android:theme="@style/Theme.TestCell.NoActionBar" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

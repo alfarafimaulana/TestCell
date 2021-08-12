@@ -5,7 +5,7 @@
     android:id="@+id/time"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DBCEF6"
+    android:background="@drawable/boxallbg"
     tools:context=".TestAct">
 
     <com.google.android.material.textfield.TextInputLayout
