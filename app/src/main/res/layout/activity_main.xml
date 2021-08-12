@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DBCEF6"
+    android:background="@color/design_default_color_primary_variant"
     tools:context=".MainActivity">
+
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/groupHorizontal1"
@@ -40,7 +41,7 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="32dp"
         android:text="Hello,"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" User"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/waktuText"
         app:layout_constraintStart_toEndOf="@+id/waktuText"
@@ -58,8 +59,8 @@
 
     <ImageView
         android:id="@+id/tbox"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toStartOf="@+id/groupHorizontal1"
@@ -68,54 +69,31 @@
 
     <ImageView
         android:id="@+id/testImage"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/tbox"
         app:layout_constraintEnd_toEndOf="@+id/tbox"
         app:layout_constraintStart_toStartOf="@+id/tbox"
         app:layout_constraintTop_toTopOf="@+id/tbox"
+        app:layout_constraintVertical_bias="0.25"
         app:srcCompat="@drawable/tower" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:text="Test Otomatis"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/tbox"
-        app:layout_constraintStart_toStartOf="@+id/tbox"
-        app:layout_constraintTop_toBottomOf="@+id/tbox" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Salurkan Opini"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView21"
-        app:layout_constraintStart_toStartOf="@+id/imageView21"
-        app:layout_constraintTop_toBottomOf="@+id/imageView21" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Lapor kejanggalan"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView24"
-        app:layout_constraintStart_toStartOf="@+id/imageView24"
-        app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+        app:layout_constraintEnd_toEndOf="@+id/testImage"
+        app:layout_constraintStart_toStartOf="@+id/testImage"
+        app:layout_constraintTop_toBottomOf="@+id/testImage" />
 
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toEndOf="@+id/groupHorizontal1"
@@ -124,18 +102,19 @@
 
     <ImageView
         android:id="@+id/opiniImage"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView21"
         app:layout_constraintEnd_toEndOf="@+id/imageView21"
         app:layout_constraintStart_toStartOf="@+id/imageView21"
         app:layout_constraintTop_toTopOf="@+id/imageView21"
+        app:layout_constraintVertical_bias="0.25"
         app:srcCompat="@drawable/opini" />
 
     <ImageView
         android:id="@+id/imageView24"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="@+id/textView16"
         app:layout_constraintStart_toStartOf="@+id/textView16"
@@ -144,12 +123,35 @@
 
     <ImageView
         android:id="@+id/bugFloating"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView24"
         app:layout_constraintEnd_toEndOf="@+id/imageView24"
         app:layout_constraintStart_toStartOf="@+id/imageView24"
         app:layout_constraintTop_toTopOf="@+id/imageView24"
+        app:layout_constraintVertical_bias="0.25"
         app:srcCompat="@drawable/bugfixes" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Laporkan Masalah"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/bugFloating"
+        app:layout_constraintStart_toStartOf="@+id/bugFloating"
+        app:layout_constraintTop_toBottomOf="@+id/bugFloating" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Berikan Opini"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/opiniImage"
+        app:layout_constraintStart_toStartOf="@+id/opiniImage"
+        app:layout_constraintTop_toBottomOf="@+id/opiniImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

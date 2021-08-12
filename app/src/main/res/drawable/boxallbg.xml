@@ -8,9 +8,6 @@
             android:endColor="#4527a0"
             android:angle="45"
             ></gradient>
-        <corners android:radius="35dp"/>
-"/>
-
     </shape>
 </item>
 </selector>
