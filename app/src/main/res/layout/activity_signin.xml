@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
+    android:background="@color/white"
     tools:context=".bugReportAct">
 
     <androidx.constraintlayout.widget.Group
@@ -24,42 +24,32 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/boxallbg" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:text="Selamat Datang"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/centerGroupBugReport"
-        app:layout_constraintStart_toStartOf="@+id/centerGroupBugReport"
-        app:layout_constraintTop_toBottomOf="@+id/centerGroupBugReport" />
+        app:srcCompat="@drawable/bg_color" />
 
     <ImageView
         android:id="@+id/signIn"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="88dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/centerGroupBugReport"
-        app:layout_constraintStart_toStartOf="@+id/centerGroupBugReport"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/boxlogin" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/signIn"
         app:layout_constraintStart_toStartOf="@+id/signIn"
         app:layout_constraintTop_toTopOf="@+id/signIn"
+        app:layout_constraintVertical_bias="0.533"
         app:srcCompat="@drawable/googleclean" />
 
     <TextView
@@ -67,10 +57,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Masuk Dengan Google"
-        android:textColor="#000000"
+        android:textColor="#270563"
         app:layout_constraintBottom_toBottomOf="@+id/signIn"
         app:layout_constraintEnd_toEndOf="@+id/signIn"
+        app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="@+id/signIn" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="401dp"
+        android:layout_height="323dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.253"
+        app:srcCompat="@drawable/signin" />
+
+    <TextView
+        android:id="@+id/selamat_datang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lalezar"
+        android:text="@string/welcome"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="271dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="68dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/moto"
+        android:textColor="#DCDADA"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/signIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

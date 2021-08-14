@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/boxallbg"
-    tools:context=".firstSplash">
+    android:background="#FFFFFF" >
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:id="@+id/imageView5"
+        android:layout_width="305dp"
+        android:layout_height="305dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wave" />
+        app:srcCompat="@drawable/techbros_logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
