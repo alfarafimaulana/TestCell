@@ -7,29 +7,40 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class bugReportAct : AppCompatActivity() {
     private lateinit var database : DatabaseReference
+    private lateinit var mAuth: FirebaseAuth
+    val db = Firebase.firestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bug_report)
         supportActionBar?.hide()
+
+
+
+
         model()
 
 
         val btn : Button = findViewById(R.id.tombolReport)
         btn.setOnClickListener{
             savedata()
+            saveFirestore()
         }
 
     }
 
     fun model() {
-        var manu = Build.MANUFACTURER
-        var model = Build.MODEL
-        var build = "$manu $model"
+        val manu = Build.MANUFACTURER
+        val model = Build.MODEL
+        val build = "$manu $model"
 
         val devM : TextView = findViewById(R.id.deviceMBugReport)
         devM.text = build
@@ -49,10 +60,41 @@ class bugReportAct : AppCompatActivity() {
 
         val bug = dataReport(dataid.toString(),model,complain)
         database.child(dataid.toString()).setValue(bug).addOnSuccessListener {
-            Toast.makeText(this, "Terima kasih atas masukannya", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Terima kasih atas masukannya", Toast.LENGTH_SHORT).show()
         }.addOnFailureListener {
-            Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
         }
     }
+    fun saveFirestore(){
+        val mod : TextView = findViewById(R.id.deviceMBugReport)
+        val kom : EditText = findViewById(R.id.laporanMasalah)
+
+        //val currentUser = mAuth.currentUser
+        //val userID = currentUser?.uid
+
+        val model = mod.text.toString()
+        val complain = kom.text.toString()
+
+
+        val user = hashMapOf(
+            //"User ID" to "$userID",
+            "Phone Model" to "$model",
+            "Complain" to "$complain",
+
+        )
+
+// Add a new document with a generated ID
+        db.collection("Komplain").add(user)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Terima kasih atas masukannya", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            }
+
+    }
+
+
+
 }
 
