@@ -26,8 +26,12 @@ class signInAct : AppCompatActivity() {
         setContentView(R.layout.activity_signin)
         supportActionBar?.hide()
 
+        //hard code the value down below because it always gave me error
+        //to revert back the changes use ".requestIdToken(getString(R.string.default_web_client_id))"
+        val default_web_client_id = "980799268223-nntghr14ulbc1cnn36qim55cg55t3sog.apps.googleusercontent.com"
+
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestIdToken(default_web_client_id)
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)

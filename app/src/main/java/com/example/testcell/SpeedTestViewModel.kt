@@ -30,7 +30,7 @@ class SpeedTestViewModel : ViewModel() {
     }
 
     fun setLatencyCallback(cb: (Int) -> Unit) {
-        latencyCb = cb
+        latencyCb = cb  
     }
 
     fun setBusyCallback(cb: (Boolean) -> Unit) {

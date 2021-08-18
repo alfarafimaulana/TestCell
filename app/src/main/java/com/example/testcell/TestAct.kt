@@ -1,11 +1,13 @@
 package com.example.testcell
 
 import android.Manifest
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.net.Uri
+import android.net.wifi.WifiManager
 import android.os.Build
 import android.os.Bundle
 import android.telephony.PhoneStateListener
@@ -29,6 +31,8 @@ class TestAct : AppCompatActivity() {
     private var telephonyManager: TelephonyManager? = null
     private val myPhoneStateListener: MyPhoneStateListener = MyPhoneStateListener()
     private var speedTestTask: SpeedTestViewModel = SpeedTestViewModel()
+    private var wifiManager: WifiManager? = null
+
     //private lateinit var fusedLocationClient: FusedLocationProviderClient
     val RequestPermissionCode = 1
     var mLocation: Location? = null
@@ -43,11 +47,14 @@ class TestAct : AppCompatActivity() {
 
         telephonyManager = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
         telephonyManager!!.listen(myPhoneStateListener, PhoneStateListener.LISTEN_SIGNAL_STRENGTHS)
+        wifiManager = applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
 
         myPhoneStateListener.setCallback(::updateSignal)
         speedTestTask.setDownloadCallback(::updateDownloadSpeed)
         speedTestTask.setUploadCallback(::updateUploadSpeed)
         speedTestTask.setLatencyCallback(::updateLatency)
+        speedTestTask.setBusyCallback (::updateBusy)
+
 
 
 
@@ -73,27 +80,64 @@ class TestAct : AppCompatActivity() {
 
         val refreshBtn: Button = findViewById(R.id.refresh2)
         refreshBtn.setOnClickListener {
-            getLastLocation()
-            timeStamp.setText(timeStamp())
-            operator()
-            model()
-
+            val speedBtn: Button = findViewById(R.id.speed2)
+            if (wifiManager!!.isWifiEnabled) {
+                Toast.makeText(this, "Harap menggunakan jaringan seluler",Toast.LENGTH_LONG).show()
+                speedBtn.isEnabled = false
+            }
+            else{
+                Toast.makeText(this, "Fungsi Test sudah dapat digunakan",Toast.LENGTH_SHORT).show()
+                speedBtn.isEnabled = true
+            }
 
         }
 
         val speedBtn: Button = findViewById(R.id.speed2)
         speedBtn.setOnClickListener {
-            speedTestTask.runTest()
-            speedTestTask.runPing()
+            if (wifiManager!!.isWifiEnabled) {
+                Toast.makeText(this, "Wifi terdeteksi, matikan wifi dan tekan refresh",Toast.LENGTH_SHORT).show()
+                speedBtn.isEnabled = false
+            }
+            else{
+                getLastLocation()
+                timeStamp.setText(timeStamp())
+                operator()
+                model()
+                speedTestTask.runTest()
+                speedTestTask.runPing()
+            }
         }
 
 
         val sumbitBtn: Button = findViewById(R.id.submitData2)
         sumbitBtn.setOnClickListener {
-            savedata()
+            val sumbitBtn: Button = findViewById(R.id.submitData2)
+            if (timeStamp.text.trim().isEmpty() && uploadView.text.trim().isEmpty() && downloadView.text.trim().isEmpty()){
+                Toast.makeText(this, "segera memulai test",Toast.LENGTH_SHORT).show()
+            }
+            else{
+                savedata()
+                sumbitBtn.isEnabled = false
+                val signInIntent = Intent(this, MainActivity::class.java)
+                startActivity(signInIntent)
+                finish()
+            }
         }
 
+
+        if (wifiManager!!.isWifiEnabled) {
+            Toast.makeText(this, "Wifi terdeteksi, matikan wifi dan tekan refresh",Toast.LENGTH_SHORT).show()
+            speedBtn.isEnabled = false
+        }
+        else{
+            speedBtn.isEnabled = true
+        }
+
+
+
     }
+
+
     fun updateUploadSpeed(speed: BigDecimal) {
         this@TestAct.runOnUiThread {
             val uploadView: TextView = findViewById(R.id.upload)
@@ -113,10 +157,19 @@ class TestAct : AppCompatActivity() {
         }
     }
 
+    fun updateBusy(busy: Boolean) {
+        this@TestAct.runOnUiThread {
+            val sumbitBtn: Button = findViewById(R.id.submitData2)
+            sumbitBtn.isEnabled = !busy
+        }
+    }
+
     fun updateSignal(strengthVal: Int) {
         val strengthView: TextView = findViewById(R.id.signal)
         strengthView.text = strengthVal.toString()
     }
+
+
 
     fun timeStamp(): String {
         val dateFormat = SimpleDateFormat("dd/mm/yyyy HH:mm:ss", Locale.US)
