@@ -22,7 +22,7 @@ class bugReportAct : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bug_report)
         supportActionBar?.hide()
-
+        mAuth = FirebaseAuth.getInstance()
 
 
 
@@ -69,17 +69,18 @@ class bugReportAct : AppCompatActivity() {
         val mod : TextView = findViewById(R.id.deviceMBugReport)
         val kom : EditText = findViewById(R.id.laporanMasalah)
 
-        //val currentUser = mAuth.currentUser
-        //val userID = currentUser?.uid
+        val currentUser = mAuth.currentUser
+        val userEmail = currentUser?.email
 
         val model = mod.text.toString()
         val complain = kom.text.toString()
 
 
         val user = hashMapOf(
-            //"User ID" to "$userID",
+            "User Email" to "$userEmail",
             "Phone Model" to "$model",
             "Complain" to "$complain",
+            "Complain and Model" to "$model: $complain",
 
         )
 
