@@ -9,18 +9,20 @@
         <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/drawable/boxtestmainact.xml" value="0.1111111111111111" />
         <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/drawable/main_bg.xml" value="0.1111111111111111" />
         <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/drawable/main_rect.xml" value="0.1111111111111111" />
-        <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_bug_report.xml" value="0.22" />
+        <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_bug_report.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_first_splash.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_opini.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_profile_user.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_signin.xml" value="0.22" />
         <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_signup.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_test.xml" value="0.16304347826086957" />
-        <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_testone.xml" value="0.16304347826086957" />
+        <entry key="..\:/Users/Auviera/StudioProjects/TestCell/app/src/main/res/layout/activity_testone.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

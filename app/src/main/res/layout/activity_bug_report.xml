@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DBCEF6"
+    android:background="@drawable/bg_color"
     tools:context=".bugReportAct">
 
     <androidx.constraintlayout.widget.Group
@@ -32,7 +32,10 @@
             android:id="@+id/laporanMasalah"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/main_rect"
+            android:fontFamily="sans-serif-light"
             android:hint="Jelaskan Masalahnya"
+            android:textColor="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,10 +43,12 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="120dp"
+        android:fontFamily="sans-serif-light"
         android:text="Model :"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,10 +56,12 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="8dp"
-        android:text="Laporkan Masalah"
-        android:textSize="24sp"
+        android:fontFamily="@font/lalezar"
+        android:text="@string/laporkan"
+        android:textColor="@color/white"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -63,8 +70,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:fontFamily="sans-serif-light"
         android:text="TextView"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
@@ -74,7 +83,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Kirim"
+        android:text="@string/kirim"
+        android:textColor="@color/dark_purple"
+        app:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="@+id/Masalah"
         app:layout_constraintStart_toStartOf="@+id/Masalah"
         app:layout_constraintTop_toBottomOf="@+id/Masalah" />

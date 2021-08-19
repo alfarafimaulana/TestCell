@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DBCEF6"
+    android:background="@drawable/bg_color"
     tools:context=".opiniAct">
 
     <androidx.constraintlayout.widget.Group
@@ -33,7 +33,10 @@
             android:id="@+id/opiniDes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/main_rect"
+            android:fontFamily="sans-serif-light"
             android:hint="Berikan Opinimu"
+            android:textColor="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -41,10 +44,14 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="108dp"
-        android:text="Operator :"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/operator"
+        android:textColor="@color/white"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,18 +60,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="sans-serif-light"
         android:text="TextView"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toTopOf="@+id/textView12" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/tombolOp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Kirim"
+        android:text="@string/kirim"
+        android:textColor="@color/dark_purple"
+        app:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="@+id/centerGroupOpini"
         app:layout_constraintStart_toStartOf="@+id/centerGroupOpini"
         app:layout_constraintTop_toBottomOf="@+id/opini" />
@@ -73,8 +88,23 @@
         android:id="@+id/ratingBarOp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/centerGroupOpini"
-        app:layout_constraintStart_toStartOf="@+id/centerGroupOpini"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/opini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="@font/lalezar"
+        android:text="@string/opini"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBarOp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

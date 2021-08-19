@@ -11,4 +11,9 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="welcome">Selamat Datang!</string>
     <string name="moto">Terhubung kapanpun dan dimanapun.</string>
+    <string name="halo">Halo,</string>
+    <string name="kirim">Kirim</string>
+    <string name="laporkan">Laporkan Masalah!</string>
+    <string name="operator">Operator:</string>
+    <string name="opini">Beri Opini!</string>
 </resources>

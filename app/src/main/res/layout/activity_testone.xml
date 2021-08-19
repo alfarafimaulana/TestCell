@@ -5,7 +5,7 @@
     android:id="@+id/time"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/boxallbg"
+    android:background="@drawable/bg_color"
     tools:context=".TestAct">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -27,10 +27,12 @@
             android:id="@+id/latency"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/main_rect"
             android:enabled="false"
+            android:fontFamily="sans-serif-light"
             android:hint="Latency"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/dark_purple"
+            android:textColorHint="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,10 +64,12 @@
             android:id="@+id/upload"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/main_rect"
             android:enabled="false"
+            android:fontFamily="sans-serif-light"
             android:hint="Upload"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/dark_purple"
+            android:textColorHint="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,9 +88,12 @@
             android:id="@+id/download"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/main_rect"
             android:enabled="false"
+            android:fontFamily="sans-serif-light"
             android:hint="Download"
-            android:textColor="#000000"
+            android:textColor="@color/dark_purple"
+            android:textColorHint="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,10 +115,12 @@
             android:id="@+id/signal"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/main_rect"
             android:enabled="false"
+            android:fontFamily="sans-serif-light"
             android:hint="Signal Strength"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/dark_purple"
+            android:textColorHint="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -133,10 +142,12 @@
             android:id="@+id/operator"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/main_rect"
             android:enabled="false"
+            android:fontFamily="sans-serif-light"
             android:hint="Operator"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/dark_purple"
+            android:textColorHint="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,10 +167,12 @@
             android:id="@+id/longitude"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/main_rect"
             android:enabled="false"
+            android:fontFamily="sans-serif-light"
             android:hint="Longitude"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/dark_purple"
+            android:textColorHint="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -179,10 +192,12 @@
             android:id="@+id/latitude"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/main_rect"
             android:enabled="false"
+            android:fontFamily="sans-serif-light"
             android:hint="Latitude"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/dark_purple"
+            android:textColorHint="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -204,10 +219,12 @@
             android:id="@+id/deviceModel"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/main_rect"
             android:enabled="false"
+            android:fontFamily="sans-serif-light"
             android:hint="Device Model"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/dark_purple"
+            android:textColorHint="@color/dark_purple"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -231,10 +248,12 @@
             android:id="@+id/timeStamp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/main_rect"
             android:enabled="false"
+            android:fontFamily="sans-serif-light"
             android:hint="Time Stamp"
-            android:textColor="#000000"
-            android:textColorHint="@color/black"
+            android:textColor="@color/dark_purple"
+            android:textColorHint="@color/dark_purple"
             android:textColorLink="#000000"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
