@@ -48,7 +48,7 @@ class tutThirdFragment : Fragment() {
             getActivity()?.startActivity(dashboardIntent)
         }
 
-        return inflater.inflate(R.layout.fragment_tut_third, container, false)
+        return view
 
     }
 

@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.Navigation
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -36,13 +36,13 @@ class tutSecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_tut_second, container, false);
         val nextBut : FloatingActionButton = view.findViewById(R.id.nextTut2)
         nextBut.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.navigateToTut3)
+            Toast.makeText(getActivity(), "Harap menggunakan jaringan seluler", Toast.LENGTH_LONG).show()
         }
-        return inflater.inflate(R.layout.fragment_tut_second, container, false)
+        return view
     }
 
     companion object {
