@@ -20,7 +20,7 @@ class firstSplash : AppCompatActivity() {
 
         Handler().postDelayed({
             if(user != null){
-                val dashboardIntent = Intent(this, MainActivity::class.java)
+                val dashboardIntent = Intent(this, tutAct::class.java)
                 startActivity(dashboardIntent)
                 finish()
             }else{
