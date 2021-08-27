@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestCell">
-        <activity android:name=".tutAct"></activity>
+        <activity android:name=".pickFunction"></activity>
+        <activity android:name=".tutAct" />
         <activity android:name=".profileUser" />
         <activity android:name=".signInAct" />
         <activity android:name=".firstSplash">
