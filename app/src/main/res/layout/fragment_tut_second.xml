@@ -9,6 +9,38 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="271dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="152dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/moto"
+        android:textColor="#DCDADA"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+    <TextView
+        android:id="@+id/selamat_datang3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="438dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/lalezar"
+        android:text="@string/data"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/nextTut2"
         android:layout_width="wrap_content"
@@ -19,5 +51,17 @@
         android:src="@drawable/next2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="416dp"
+        android:layout_height="501dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="82dp"
+        android:src="@drawable/wifi"
+        app:layout_constraintBottom_toTopOf="@+id/nextTut2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

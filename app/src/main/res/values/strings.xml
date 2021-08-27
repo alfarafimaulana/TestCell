@@ -16,5 +16,13 @@
     <string name="laporkan">Laporkan Masalah!</string>
     <string name="operator">Operator:</string>
     <string name="opini">Beri Opini!</string>
+    <string name="test_menu">Lakukan tes untuk mengetahui kekuatan sinyalmu!</string>
+    <string name="TestCell">Test Cell</string>
+    <string name="coming_soon">Coming Soon!</string>
+    <string name="profil">Profil</string>
+    <string name="profil_menu">Nama, e-mail, dll.</string>
+    <string name="data">Aktifkan Data Seluler!</string>
+    <string name="lokasi">Aktifkan Lokasi!</string>
+    <string name="Masuk">Masuk ke Akun!</string>
 
 </resources>

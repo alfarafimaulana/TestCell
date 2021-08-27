@@ -7,6 +7,37 @@
     android:background="@drawable/bg_color"
     tools:context=".tutThirdFragment">
 
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="271dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="168dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/moto"
+        android:textColor="#DCDADA"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+    <TextView
+        android:id="@+id/selamat_datang4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/lalezar"
+        android:text="@string/lokasi"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/finishTut"
         android:layout_width="wrap_content"
@@ -17,4 +48,16 @@
         android:src="@drawable/next2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="416dp"
+        android:layout_height="421dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="21dp"
+        android:src="@drawable/lokasi"
+        app:layout_constraintBottom_toTopOf="@+id/selamat_datang4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
