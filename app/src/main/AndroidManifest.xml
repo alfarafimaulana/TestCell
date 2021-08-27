@@ -14,14 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestCell">
-        <activity android:name=".profileUser"></activity>
+        <activity android:name=".tutAct"></activity>
+        <activity android:name=".profileUser" />
         <activity android:name=".signInAct" />
         <activity android:name=".firstSplash">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".opiniAct" />
         <activity android:name=".bugReportAct" />
@@ -29,7 +30,7 @@
             android:name=".TestAct"
             android:label="@string/title_activity_test"
             android:theme="@style/Theme.TestCell.NoActionBar" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

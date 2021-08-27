@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tutorial_nav"
+    app:startDestination="@id/tutFirstFragment">
+    <fragment
+        android:id="@+id/tutFirstFragment"
+        android:name="com.example.testcell.tutFirstFragment"
+        android:label="fragment_tut_first"
+        tools:layout="@layout/fragment_tut_first" >
+        <action
+            android:id="@+id/navigateToTut2"
+            app:destination="@id/tutSecondFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutSecondFragment"
+        android:name="com.example.testcell.tutSecondFragment"
+        android:label="fragment_tut_second"
+        tools:layout="@layout/fragment_tut_second" >
+        <action
+            android:id="@+id/navigateToTut3"
+            app:destination="@id/tutThirdFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutThirdFragment"
+        android:name="com.example.testcell.tutThirdFragment"
+        android:label="fragment_tut_third"
+        tools:layout="@layout/fragment_tut_third" />
+</navigation>
