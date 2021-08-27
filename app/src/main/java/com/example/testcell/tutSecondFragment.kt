@@ -40,7 +40,6 @@ class tutSecondFragment : Fragment() {
         val nextBut : FloatingActionButton = view.findViewById(R.id.nextTut2)
         nextBut.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.navigateToTut3)
-            Toast.makeText(getActivity(), "Harap menggunakan jaringan seluler", Toast.LENGTH_LONG).show()
         }
         return view
     }

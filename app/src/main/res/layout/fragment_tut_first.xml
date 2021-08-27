@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CC1414"
-    tools:context=".tutFirstFragment" >
+    android:background="@drawable/bg_color"
+    tools:context=".tutFirstFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/nextTut1"
