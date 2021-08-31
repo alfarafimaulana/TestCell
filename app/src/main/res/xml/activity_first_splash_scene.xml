@@ -6,7 +6,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000">
+        motion:duration="2000">
        <KeyFrameSet>
            <KeyAttribute
                motion:motionTarget="@+id/imageView5"
@@ -46,6 +46,13 @@
             motion:layout_constraintHorizontal_bias="0.583"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            android:alpha="1" />
+            android:alpha="1"
+            android:visibility="visible" />
     </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:autoTransition="animateToEnd" >
+        <OnClick />
+    </Transition>
 </MotionScene>

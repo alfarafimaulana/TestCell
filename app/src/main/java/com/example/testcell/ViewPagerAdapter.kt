@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.testcell.MainActivity
 import com.example.testcell.R
 import com.example.testcell.profileUser
+import com.example.testcell.voiceOfCustomer
 
 
 class ViewPagerAdapter(private var title : List<String>,private var images : List<Int>) : RecyclerView.Adapter<ViewPagerAdapter.pager2ViewHolder>() {
@@ -29,7 +30,8 @@ class ViewPagerAdapter(private var title : List<String>,private var images : Lis
                     itemView.context.startActivity(dashboardIntent)
                 }
                 if (position == 1){
-                    Toast.makeText(itemView.context, "Comming Soon", Toast.LENGTH_SHORT).show()
+                    val dashboardIntent = Intent(itemView.context, voiceOfCustomer::class.java)
+                    itemView.context.startActivity(dashboardIntent)
                 }
                 if (position == 2){
                     val dashboardIntent = Intent(itemView.context, profileUser::class.java)
