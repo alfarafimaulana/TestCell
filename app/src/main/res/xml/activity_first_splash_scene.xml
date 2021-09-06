@@ -32,8 +32,7 @@
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintHorizontal_bias="0.583"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            android:alpha="0.4" />
+            motion:layout_constraintStart_toStartOf="parent" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -43,16 +42,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintHorizontal_bias="0.583"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:alpha="1"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp" />
     </ConstraintSet>
     <Transition
         motion:constraintSetStart="@+id/start"
         motion:constraintSetEnd="@+id/end"
-        motion:autoTransition="animateToEnd" >
-        <OnClick />
-    </Transition>
+        motion:autoTransition="animateToEnd" ></Transition>
 </MotionScene>

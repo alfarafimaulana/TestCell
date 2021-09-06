@@ -3,34 +3,47 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
-    <Transition
-        motion:constraintSetEnd="@+id/end"
-        motion:constraintSetStart="@id/start"
-        motion:duration="1000">
-       <KeyFrameSet>
-           <KeyAttribute
-               motion:motionTarget="@+id/textView25"
-               motion:framePosition="0"
-               android:alpha="0.3" />
-           <KeyAttribute
-               motion:motionTarget="@+id/textView26"
-               motion:framePosition="0"
-               android:alpha="0.3" />
-           <KeyAttribute
-               motion:motionTarget="@+id/textView25"
-               motion:framePosition="55"
-               android:alpha="0.6" />
-           <KeyAttribute
-               motion:motionTarget="@+id/textView26"
-               motion:framePosition="55"
-               android:alpha="0.6" />
-       </KeyFrameSet>
-    </Transition>
-
     <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/floatingActionButton"
+            motion:layout_constraintTop_toBottomOf="@+id/viewPagerIklan"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.9"
+            motion:layout_constraintHorizontal_bias="0.9" />
+        <Constraint
+            android:layout_height="255dp"
+            android:layout_width="375dp"
+            android:id="@+id/viewPager2"
+            motion:layout_constraintTop_toBottomOf="@+id/viewPagerIklan"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias="0.301"
+            motion:layout_constraintHorizontal_bias="0.5" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/floatingActionButton"
+            motion:layout_constraintTop_toBottomOf="@+id/viewPagerIklan"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.904"
+            motion:layout_constraintHorizontal_bias="0.901" />
+        <Constraint
+            android:layout_height="102dp"
+            motion:layout_editor_absoluteX="1dp"
+            motion:layout_constraintBottom_toTopOf="@+id/viewPagerFun"
+            android:layout_width="409dp"
+            android:id="@+id/scrollView3"
+            motion:layout_constraintTop_toBottomOf="@+id/viewPagerIklan" />
     </ConstraintSet>
     <Transition
         motion:constraintSetStart="@+id/start"
