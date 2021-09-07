@@ -1,11 +1,14 @@
 package com.example.testcell
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.google.firebase.auth.FirebaseAuth
+import de.hdodenhof.circleimageview.CircleImageView
 import layout.ViewPagerAdapterFun
 import layout.ViewPagerAdapterIklan
 
@@ -47,6 +50,13 @@ class voiceOfCustomer : AppCompatActivity() {
 
         viewPagerFun.adapter = ViewPagerAdapterFun(sambutanFun,pilihan1,pilihan2)
         viewPagerFun.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        val profilPic : CircleImageView = findViewById(R.id.gambarUser2)
+        profilPic.setOnClickListener{
+            val intent = Intent(this,profileUser::class.java)
+            startActivity(intent)
+            finish()
+        }
 
 
 
