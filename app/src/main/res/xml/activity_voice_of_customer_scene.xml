@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
-    <ConstraintSet android:id="@+id/start">
+    <ConstraintSet>
         <Constraint
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,17 +38,14 @@
             motion:layout_constraintVertical_bias="0.904"
             motion:layout_constraintHorizontal_bias="0.901" />
         <Constraint
-            android:layout_height="102dp"
-            motion:layout_editor_absoluteX="1dp"
-            motion:layout_constraintBottom_toTopOf="@+id/viewPagerFun"
-            android:layout_width="409dp"
-            android:id="@+id/scrollView3"
-            motion:layout_constraintTop_toBottomOf="@+id/viewPagerIklan" />
+            motion:layout_editor_absoluteY="341dp"
+            android:layout_height="wrap_content"
+            motion:layout_editor_absoluteX="32dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/button" />
     </ConstraintSet>
     <Transition
         motion:constraintSetStart="@+id/start"
         motion:constraintSetEnd="@+id/end"
-        motion:autoTransition="animateToEnd" >
-        <OnClick />
-    </Transition>
+        motion:autoTransition="animateToEnd" ></Transition>
 </MotionScene>
