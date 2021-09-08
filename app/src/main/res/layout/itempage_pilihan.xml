@@ -18,22 +18,26 @@
 
     <ImageView
         android:id="@+id/pil2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toEndOf="@+id/centerGroupFun"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
         app:srcCompat="@drawable/boxallbg" />
 
     <ImageView
         android:id="@+id/pil1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/centerGroupFun"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
         app:srcCompat="@drawable/boxallbg" />
 
     <TextView
@@ -41,8 +45,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/pil1"
         app:layout_constraintEnd_toStartOf="@+id/centerGroupFun"
         app:layout_constraintHorizontal_bias="0.346"

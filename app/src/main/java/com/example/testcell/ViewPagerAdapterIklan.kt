@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.testcell.R
 
 
-class ViewPagerAdapterIklan(private var title: List<String>, private var images: List<Int>) : RecyclerView.Adapter<ViewPagerAdapterIklan.pager2ViewHolder>() {
+class ViewPagerAdapterIklan( private var images: List<Int>) : RecyclerView.Adapter<ViewPagerAdapterIklan.pager2ViewHolder>() {
 
     inner class pager2ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        val itemTitle : TextView = itemView.findViewById(R.id.judulFun)
+
         val itemImage : ImageView = itemView.findViewById(R.id.gambarFun)
 
 
@@ -35,12 +35,12 @@ class ViewPagerAdapterIklan(private var title: List<String>, private var images:
     }
 
     override fun onBindViewHolder(holder: ViewPagerAdapterIklan.pager2ViewHolder, position: Int) {
-        holder.itemTitle.text = title[position]
+
         holder.itemImage.setImageResource(images[position])
 
     }
 
     override fun getItemCount(): Int {
-        return title.size
+        return images.size
     }
 }

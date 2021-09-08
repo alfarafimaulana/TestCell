@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import de.hdodenhof.circleimageview.CircleImageView
 import layout.ViewPagerAdapterFun
 import layout.ViewPagerAdapterIklan
+import me.relex.circleindicator.CircleIndicator3
 
 class voiceOfCustomer : AppCompatActivity() {
 
@@ -42,7 +43,7 @@ class voiceOfCustomer : AppCompatActivity() {
 
         val viewPagerIklan : ViewPager2 = findViewById(R.id.viewPagerIklan)
 
-        viewPagerIklan.adapter = ViewPagerAdapterIklan(titleIklan,imageIklan)
+        viewPagerIklan.adapter = ViewPagerAdapterIklan(imageIklan)
         viewPagerIklan.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
 
@@ -50,6 +51,9 @@ class voiceOfCustomer : AppCompatActivity() {
 
         viewPagerFun.adapter = ViewPagerAdapterFun(sambutanFun,pilihan1,pilihan2)
         viewPagerFun.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        val indicator : CircleIndicator3 = findViewById(R.id.indicatorFun)
+        indicator.setViewPager(viewPagerFun)
 
         val profilPic : CircleImageView = findViewById(R.id.gambarUser2)
         profilPic.setOnClickListener{
@@ -65,8 +69,7 @@ class voiceOfCustomer : AppCompatActivity() {
 
     }
 
-    private fun addToListIklan(title: String, images : Int){
-        titleIklan.add(title)
+    private fun addToListIklan(images : Int){
         imageIklan.add(images)
     }
 
@@ -77,13 +80,12 @@ class voiceOfCustomer : AppCompatActivity() {
     }
 
     private fun postToListIklan(){
-        addToListIklan("Test Cell", R.drawable.wifi)
-        addToListIklan("Comming Soon", R.drawable.coming_soon)
-        addToListIklan("Profile", R.drawable.opinion)
+        addToListIklan( R.drawable.iklandummy1)
+        addToListIklan( R.drawable.coming_soon)
     }
 
     private fun postToListFun(){
-        addToListFun("Test Cell",R.mipmap.signal, R.mipmap.signal_foreground)
+        addToListFun("Test Cell",R.mipmap.signal_round, R.mipmap.opini_round)
         addToListFun("Quistioner",R.drawable.coming_soon, R.drawable.coming_soon)
     }
 }

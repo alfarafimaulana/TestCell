@@ -5,23 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/judulFun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/lalezar"
-        android:text="@string/coming_soon"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/gambarFun"
-        app:layout_constraintStart_toStartOf="@+id/gambarFun"
-        app:layout_constraintTop_toBottomOf="@+id/gambarFun" />
-
     <ImageView
         android:id="@+id/gambarFun"
-        android:layout_width="340dp"
-        android:layout_height="180dp"
+        android:layout_width="345dp"
+        android:layout_height="220dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"

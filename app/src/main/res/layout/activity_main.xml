@@ -92,7 +92,7 @@
         app:layout_constraintStart_toStartOf="@+id/tbox"
         app:layout_constraintTop_toTopOf="@+id/tbox"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/signal" />
+        app:srcCompat="@mipmap/signal_foreground" />
 
     <TextView
         android:id="@+id/textView16"

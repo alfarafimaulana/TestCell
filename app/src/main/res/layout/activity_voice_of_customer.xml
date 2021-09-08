@@ -9,6 +9,17 @@
     app:layoutDescription="@xml/activity_voice_of_customer_scene"
     tools:context=".voiceOfCustomer">
 
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicatorFun"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPagerFun"
+        app:layout_constraintVertical_bias="0.0" />
+
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/gambarUser2"
@@ -47,36 +58,23 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagerIklan"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95"
-        app:srcCompat="@drawable/ladybug" />
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPagerFun"
         android:layout_width="match_parent"
-        android:layout_height="225dp"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewPagerIklan"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.336" />
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
