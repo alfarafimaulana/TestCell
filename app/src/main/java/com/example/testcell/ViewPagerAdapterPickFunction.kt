@@ -1,6 +1,5 @@
 package layout
 
-import android.app.PendingIntent.getActivity
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -9,13 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testcell.MainActivity
-import com.example.testcell.R
-import com.example.testcell.profileUser
-import com.example.testcell.voiceOfCustomer
+import com.example.testcell.*
 
 
-class ViewPagerAdapter(private var title : List<String>,private var images : List<Int>) : RecyclerView.Adapter<ViewPagerAdapter.pager2ViewHolder>() {
+class ViewPagerAdapterPickFunction(private var title : List<String>, private var images : List<Int>) : RecyclerView.Adapter<ViewPagerAdapterPickFunction.pager2ViewHolder>() {
 
     inner class pager2ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val itemTitle : TextView = itemView.findViewById(R.id.namaFungsiDiViewpager)
@@ -30,7 +26,7 @@ class ViewPagerAdapter(private var title : List<String>,private var images : Lis
                     itemView.context.startActivity(dashboardIntent)
                 }
                 if (position == 1){
-                    val dashboardIntent = Intent(itemView.context, voiceOfCustomer::class.java)
+                    val dashboardIntent = Intent(itemView.context, new_menu::class.java)
                     itemView.context.startActivity(dashboardIntent)
                 }
                 if (position == 2){
@@ -47,13 +43,13 @@ class ViewPagerAdapter(private var title : List<String>,private var images : Lis
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ViewPagerAdapter.pager2ViewHolder {
+    ): ViewPagerAdapterPickFunction.pager2ViewHolder {
         return pager2ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.itempage_fun_select, parent, false))
 
 
     }
 
-    override fun onBindViewHolder(holder: ViewPagerAdapter.pager2ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewPagerAdapterPickFunction.pager2ViewHolder, position: Int) {
         holder.itemTitle.text = title[position]
         holder.itemImage.setImageResource(images[position])
 

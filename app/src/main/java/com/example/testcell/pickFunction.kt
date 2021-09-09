@@ -3,7 +3,7 @@ package com.example.testcell
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
-import layout.ViewPagerAdapter
+import layout.ViewPagerAdapterPickFunction
 import me.relex.circleindicator.CircleIndicator3
 
 class pickFunction : AppCompatActivity() {
@@ -20,7 +20,7 @@ class pickFunction : AppCompatActivity() {
         postToList()
         val viewPagerFun : ViewPager2 = findViewById(R.id.viewPagerFun)
 
-        viewPagerFun.adapter = ViewPagerAdapter(titleList,imageList)
+        viewPagerFun.adapter = ViewPagerAdapterPickFunction(titleList,imageList)
         viewPagerFun.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         val indicator : CircleIndicator3 = findViewById(R.id.indicator)

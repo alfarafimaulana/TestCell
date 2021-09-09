@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_menu_proto_v2"
+    app:startDestination="@id/newMainMenu">
+    <fragment
+        android:id="@+id/newMainMenu"
+        android:name="com.example.testcell.newMainMenu"
+        android:label="fragment_new_main_menu"
+        tools:layout="@layout/fragment_new_main_menu" >
+        <action
+            android:id="@+id/action_newMainMenu_to_newProfile"
+            app:destination="@id/newProfile"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newProfile"
+        android:name="com.example.testcell.newProfile"
+        android:label="fragment_new_profile"
+        tools:layout="@layout/fragment_new_profile" >
+        <action
+            android:id="@+id/action_newProfile_to_newMainMenu"
+            app:destination="@id/newMainMenu"
+            app:enterAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>
