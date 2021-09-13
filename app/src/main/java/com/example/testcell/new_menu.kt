@@ -14,19 +14,26 @@ class new_menu : AppCompatActivity() {
         supportActionBar?.hide()
 
         val bottomNavigation : BottomNavigationView = findViewById(R.id.bottomNavigationView)
-        val navMap : FragmentContainerView = findViewById(R.id.fragmentMenu)
+        val navMap : FragmentContainerView = findViewById(R.id.newMenu)
+        var page = 1
 
-
-        bottomNavigation.setOnNavigationItemReselectedListener { item ->
-            when(item.itemId) {
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
                 R.id.page_1 -> {
-                    Navigation.findNavController(navMap).navigate(R.id.action_newProfile_to_newMainMenu)
-
+                    if (page != 1){
+                        Navigation.findNavController(navMap).navigate(R.id.action_newProfile_to_newMainMenu)
+                        page = 1
+                    }
                 }
                 R.id.page_2 -> {
-                    Navigation.findNavController(navMap).navigate(R.id.action_newMainMenu_to_newProfile)
+                    if (page != 2){
+                        Navigation.findNavController(navMap).navigate(R.id.action_newMainMenu_to_newProfile)
+                        page = 2
+                    }
                 }
             }
+            true
         }
+
     }
 }
