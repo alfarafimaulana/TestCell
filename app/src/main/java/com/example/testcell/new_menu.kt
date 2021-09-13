@@ -8,6 +8,7 @@ import androidx.navigation.Navigation
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class new_menu : AppCompatActivity() {
+    var page = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_menu)
@@ -15,7 +16,6 @@ class new_menu : AppCompatActivity() {
 
         val bottomNavigation : BottomNavigationView = findViewById(R.id.bottomNavigationView)
         val navMap : FragmentContainerView = findViewById(R.id.newMenu)
-        var page = 1
 
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -29,11 +29,25 @@ class new_menu : AppCompatActivity() {
                     if (page != 2){
                         Navigation.findNavController(navMap).navigate(R.id.action_newMainMenu_to_newProfile)
                         page = 2
+
                     }
                 }
             }
             true
         }
 
+
+
+
     }
-}
+    override fun onBackPressed() {
+        val navMap : FragmentContainerView = findViewById(R.id.newMenu)
+        if (page != 1){
+            Navigation.findNavController(navMap).navigate(R.id.action_newProfile_to_newMainMenu)
+            page = 1
+        }
+        else{
+            finish()
+        }
+    }
+    }

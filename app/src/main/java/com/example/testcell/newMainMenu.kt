@@ -85,10 +85,7 @@ class newMainMenu : Fragment() {
         val indicator : CircleIndicator3 = View.findViewById(R.id.indicatorFun)
         indicator.setViewPager(viewPagerFun)
 
-        val profilPic : CircleImageView = View.findViewById(R.id.gambarUser2)
-        profilPic.setOnClickListener{
-            Navigation.findNavController(View).navigate(R.id.action_newMainMenu_to_newProfile)
-        }
+        
 
         param3 = param3?.plus(1)
         // Inflate the layout for this fragment

@@ -42,4 +42,8 @@ class pickFunction : AppCompatActivity() {
 
     }
 
+
+    override fun onBackPressed(){
+        finish()
+    }
 }
