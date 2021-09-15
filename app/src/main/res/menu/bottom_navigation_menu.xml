@@ -5,8 +5,14 @@
         android:icon="@drawable/flask"
         android:title="Main Menu"/>
     <item
+        android:id="@+id/page_3"
+        android:enabled="true"
+        android:icon="@android:drawable/sym_action_chat"
+        android:title="Voice"/>
+    <item
         android:id="@+id/page_2"
         android:enabled="true"
         android:icon="@drawable/newuser"
         android:title="Profile"/>
+
 </menu>

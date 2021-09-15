@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -21,13 +21,13 @@
     <ImageView
         android:id="@+id/imageView22"
         android:layout_width="match_parent"
-        android:layout_height="520dp"
+        android:layout_height="570dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView16"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/bg_menu" />
+        app:srcCompat="@drawable/new_bg_box_white" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/gambarUserProfile"
@@ -35,10 +35,10 @@
         android:layout_height="112dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintVertical_bias="0.169"
         app:srcCompat="@drawable/profilefp" />
 
     <TextView
@@ -62,9 +62,9 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/imageView22"
         app:layout_constraintEnd_toEndOf="@+id/imageView22"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/imageView22"
         app:layout_constraintTop_toBottomOf="@+id/namaUs"
-        app:layout_constraintVertical_bias="0.961" />
+        app:layout_constraintVertical_bias="0.775" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,40 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/profilPic"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/new_bg_testcell_proto"
-    app:layoutDescription="@xml/activity_voice_of_customer_scene"
-    tools:context=".newMainMenu">
-    .newMainMenu
+    android:background="@drawable/main_bg"
+    tools:context=".newProfile" >
 
     <me.relex.circleindicator.CircleIndicator3
-        android:id="@+id/indicatorFun"
+        android:id="@+id/indicatorIklan2"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPagerFun"
+        app:layout_constraintTop_toBottomOf="@+id/viewIklan2"
         app:layout_constraintVertical_bias="0.0" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/gambarUser2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.90"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/circlelayer" />
-
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Voice of Customer"
@@ -48,33 +33,36 @@
         app:layout_constraintVertical_bias="0.025" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your opinions matter"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textView25"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+        app:layout_constraintEnd_toEndOf="@+id/textView27"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPagerIklan"
+    <ImageView
+        android:id="@+id/imageView19"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPagerFun"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="610dp"
+        android:background="@drawable/new_bg_box_white"
+        android:src="@drawable/new_bg_box_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPagerIklan"
-        app:layout_constraintVertical_bias="0.336" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-
-</androidx.constraintlayout.motion.widget.MotionLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewIklan2"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView19"
+        app:layout_constraintVertical_bias="0.060000002" />
+</androidx.constraintlayout.widget.ConstraintLayout>

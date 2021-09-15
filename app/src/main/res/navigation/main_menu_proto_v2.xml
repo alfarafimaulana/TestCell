@@ -14,8 +14,15 @@
             app:destination="@id/newProfile"
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_newMainMenu_to_voiceOfC"
+            app:destination="@id/NewVoiceOfC"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/newProfile"
@@ -26,6 +33,47 @@
             android:id="@+id/action_newProfile_to_newMainMenu"
             app:destination="@id/newMainMenu"
             app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_newProfile_to_voiceOfC"
+            app:destination="@id/NewVoiceOfC"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/NewVoiceOfC"
+        android:name="com.example.testcell.voiceOfC"
+        android:label="fragment_voice_of_c"
+        tools:layout="@layout/fragment_new_voice_of_c" >
+        <action
+            android:id="@+id/action_voiceOfC_to_newMainMenu"
+            app:destination="@id/newMainMenu"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_voiceOfC_to_newProfile"
+            app:destination="@id/newProfile"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_NewVoiceOfC_to_newQustioner"
+            app:destination="@id/newQustioner" />
+    </fragment>
+    <fragment
+        android:id="@+id/newQustioner"
+        android:name="com.example.testcell.newQustioner"
+        android:label="fragment_new_qustioner"
+        tools:layout="@layout/fragment_new_qustioner" >
+        <action
+            android:id="@+id/action_newQustioner_to_NewVoiceOfC"
+            app:destination="@id/NewVoiceOfC" />
     </fragment>
 </navigation>

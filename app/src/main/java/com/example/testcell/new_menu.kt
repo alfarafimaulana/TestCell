@@ -21,15 +21,38 @@ class new_menu : AppCompatActivity() {
             when (item.itemId) {
                 R.id.page_1 -> {
                     if (page != 1){
-                        Navigation.findNavController(navMap).navigate(R.id.action_newProfile_to_newMainMenu)
-                        page = 1
+                        if (page == 2){
+                            Navigation.findNavController(navMap).navigate(R.id.action_newProfile_to_newMainMenu)
+                            page = 1
+                        }
+                        if (page == 3){
+                            Navigation.findNavController(navMap).navigate(R.id.action_voiceOfC_to_newMainMenu)
+                            page = 1
+                        }
                     }
                 }
                 R.id.page_2 -> {
                     if (page != 2){
-                        Navigation.findNavController(navMap).navigate(R.id.action_newMainMenu_to_newProfile)
-                        page = 2
-
+                        if (page == 1){
+                            Navigation.findNavController(navMap).navigate(R.id.action_newMainMenu_to_newProfile)
+                            page = 2
+                        }
+                        if (page == 3){
+                            Navigation.findNavController(navMap).navigate(R.id.action_voiceOfC_to_newProfile)
+                            page = 2
+                        }
+                    }
+                }
+                R.id.page_3 -> {
+                    if (page != 3){
+                        if (page == 1){
+                            Navigation.findNavController(navMap).navigate(R.id.action_newMainMenu_to_voiceOfC)
+                            page = 3
+                        }
+                        if (page == 2){
+                            Navigation.findNavController(navMap).navigate(R.id.action_newProfile_to_voiceOfC)
+                            page = 3
+                        }
                     }
                 }
             }
@@ -43,8 +66,14 @@ class new_menu : AppCompatActivity() {
     override fun onBackPressed() {
         val navMap : FragmentContainerView = findViewById(R.id.newMenu)
         if (page != 1){
-            Navigation.findNavController(navMap).navigate(R.id.action_newProfile_to_newMainMenu)
-            page = 1
+            if (page == 2){
+                Navigation.findNavController(navMap).navigate(R.id.action_newProfile_to_newMainMenu)
+                page = 1
+            }
+            if (page == 3){
+                Navigation.findNavController(navMap).navigate(R.id.action_voiceOfC_to_newMainMenu)
+                page = 1
+            }
         }
         else{
             finish()
