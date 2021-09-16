@@ -34,6 +34,7 @@ class newMainMenu : Fragment() {
     private var param3: Int? = 0
 
 
+
     private val titleIklan = mutableListOf<String>()
     private val imageIklan = mutableListOf<Int>()
 
@@ -71,16 +72,18 @@ class newMainMenu : Fragment() {
         Glide.with(this).load(currentUser?.photoUrl).into(gambarUser)
 
 
-        val viewPagerIklan : ViewPager2 = View.findViewById(R.id.viewPagerIklan)
 
-        viewPagerIklan.adapter = ViewPagerAdapterIklan(imageIklan)
-        viewPagerIklan.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
 
         val viewPagerFun : ViewPager2 = View.findViewById(R.id.viewPagerFun)
 
         viewPagerFun.adapter = ViewPagerAdapterFun(sambutanFun,pilihan1,pilihan2)
         viewPagerFun.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        val viewPagerIklan : ViewPager2 = View.findViewById(R.id.viewPagerIklan)
+
+        viewPagerIklan.adapter = ViewPagerAdapterIklan(imageIklan)
+        viewPagerIklan.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         val indicator : CircleIndicator3 = View.findViewById(R.id.indicatorFun)
         indicator.setViewPager(viewPagerFun)

@@ -5,11 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
+import layout.ViewPagerAdapterIklan
+import me.relex.circleindicator.CircleIndicator3
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+private const val ARG_PARAM3 = "param3"
 
 /**
  * A simple [Fragment] subclass.
@@ -20,12 +24,23 @@ class voiceOfC : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var param3: Int? = 0
+
+    private val titleIklan = mutableListOf<String>()
+    private val imageIklan = mutableListOf<Int>()
+
+
+    private val sambutanFun = mutableListOf<String>()
+    private val pilihan1 = mutableListOf<Int>()
+    private val pilihan2 = mutableListOf<Int>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+            param3 = it.getInt(ARG_PARAM3)
         }
     }
 
@@ -33,9 +48,34 @@ class voiceOfC : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_new_voice_of_c, container, false)
+        val View = inflater.inflate(R.layout.fragment_new_voice_of_c, container, false)
+
+        if (param3 == 0) {
+            postToListIklan()
+        }
+        val viewPagerIklan : ViewPager2 = View.findViewById(R.id.viewIklan2)
+
+        viewPagerIklan.adapter = ViewPagerAdapterIklan(imageIklan)
+        viewPagerIklan.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        val indicator : CircleIndicator3 = View.findViewById(R.id.indicatorIklan2)
+        indicator.setViewPager(viewPagerIklan)
+
+
+
+
+
+        return View
     }
+    private fun addToListIklan(images : Int){
+        imageIklan.add(images)
+    }
+
+    private fun postToListIklan(){
+        addToListIklan( R.drawable.iklandummy1)
+        addToListIklan( R.drawable.coming_soon)
+    }
+
 
     companion object {
         /**
@@ -53,6 +93,7 @@ class voiceOfC : Fragment() {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
+                    param3?.let { putInt(ARG_PARAM3, it) }
                 }
             }
     }
