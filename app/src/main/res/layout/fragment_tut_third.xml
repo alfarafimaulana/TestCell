@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_color"
+    android:background="@color/white"
     tools:context=".tutThirdFragment">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginBottom="168dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/moto"
-        android:textColor="#DCDADA"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         android:layout_marginBottom="18dp"
         android:fontFamily="@font/lalezar"
         android:text="@string/lokasi"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textView24"
         app:layout_constraintEnd_toEndOf="parent"

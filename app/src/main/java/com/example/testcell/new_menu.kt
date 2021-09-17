@@ -62,6 +62,8 @@ class new_menu : AppCompatActivity() {
 
 
 
+
+
     }
     override fun onBackPressed() {
         val navMap : FragmentContainerView = findViewById(R.id.newMenu)

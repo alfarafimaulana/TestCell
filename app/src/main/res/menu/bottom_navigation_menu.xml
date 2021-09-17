@@ -3,12 +3,12 @@
         android:id="@+id/page_1"
         android:enabled="true"
         android:icon="@drawable/flask"
-        android:title="Main Menu"/>
+        android:title="CS"/>
     <item
         android:id="@+id/page_3"
         android:enabled="true"
         android:icon="@android:drawable/sym_action_chat"
-        android:title="Voice"/>
+        android:title="VOC"/>
     <item
         android:id="@+id/page_2"
         android:enabled="true"

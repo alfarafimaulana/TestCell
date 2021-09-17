@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_color"
+    android:background="@color/white"
     tools:context=".tutSecondFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,33 +13,31 @@
         android:id="@+id/textView23"
         android:layout_width="271dp"
         android:layout_height="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="152dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/moto"
-        android:textColor="#DCDADA"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintEnd_toEndOf="@+id/selamat_datang3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/selamat_datang3"
+        app:layout_constraintTop_toBottomOf="@+id/selamat_datang3"
+        app:layout_constraintVertical_bias="0.060000002" />
 
     <TextView
         android:id="@+id/selamat_datang3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="438dp"
-        android:layout_marginBottom="2dp"
         android:fontFamily="@font/lalezar"
         android:text="@string/data"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView14" />
+        app:layout_constraintTop_toTopOf="@+id/imageView14"
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/nextTut2"

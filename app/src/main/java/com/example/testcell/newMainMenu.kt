@@ -105,7 +105,7 @@ class newMainMenu : Fragment() {
     }
 
     private fun postToListIklan(){
-        addToListIklan( R.drawable.iklandummy1)
+        addToListIklan( R.drawable.iklan_cell)
         addToListIklan( R.drawable.coming_soon)
     }
 

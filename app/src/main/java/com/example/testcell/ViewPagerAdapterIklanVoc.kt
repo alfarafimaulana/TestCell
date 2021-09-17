@@ -6,13 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testcell.R
-import com.example.testcell.TestAct
 
 
-class ViewPagerAdapterIklan( private var images: List<Int>) : RecyclerView.Adapter<ViewPagerAdapterIklan.pager2ViewHolder>() {
+class ViewPagerAdapterIklanVoc(private var images: List<Int>) : RecyclerView.Adapter<ViewPagerAdapterIklanVoc.pager2ViewHolder>() {
 
     inner class pager2ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
@@ -22,12 +23,10 @@ class ViewPagerAdapterIklan( private var images: List<Int>) : RecyclerView.Adapt
 
         init {
             itemImage.setOnClickListener {
-                val position = adapterPosition
-                if(position == 0){
-                    val openURL = Intent(android.content.Intent.ACTION_VIEW)
-                    openURL.data = Uri.parse("https://www.inews.id/techno/telco/cara-mengaktifkan-paket-belajar-telkomsel")
-                    itemView.context.startActivity(openURL)
-                }
+                val gmmIntentUri = Uri.parse("geo:0,0?q=restaurants")
+                val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+                mapIntent.setPackage("com.google.android.apps.maps")
+                itemView.context.startActivity(mapIntent)
 
             }
         }
@@ -36,11 +35,11 @@ class ViewPagerAdapterIklan( private var images: List<Int>) : RecyclerView.Adapt
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ViewPagerAdapterIklan.pager2ViewHolder {
+    ): ViewPagerAdapterIklanVoc.pager2ViewHolder {
         return pager2ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.itempage_iklan, parent, false))
     }
 
-    override fun onBindViewHolder(holder: ViewPagerAdapterIklan.pager2ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewPagerAdapterIklanVoc.pager2ViewHolder, position: Int) {
 
         holder.itemImage.setImageResource(images[position])
 

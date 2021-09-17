@@ -12,6 +12,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/lalezar"
         android:text="@string/coming_soon"
+        android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/gambarFungsiDiViewpager"
         app:layout_constraintStart_toStartOf="@+id/gambarFungsiDiViewpager"

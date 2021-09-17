@@ -1,13 +1,21 @@
 package com.example.testcell
 
+import android.app.AlertDialog
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.snackbar.Snackbar
+import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 import layout.ViewPagerAdapterIklan
-import me.relex.circleindicator.CircleIndicator3
+import layout.ViewPagerAdapterIklanVoc
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,19 +57,43 @@ class voiceOfC : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val View = inflater.inflate(R.layout.fragment_new_voice_of_c, container, false)
+        val vocButton : ImageView = View.findViewById(R.id.vocButton)
+
+        vocButton.setOnClickListener {
+            val dashboardIntent = Intent(View.context, newQuistionerV2::class.java)
+            View.context.startActivity(dashboardIntent)
+        }
+        vocButton.setOnLongClickListener(object: View.OnLongClickListener {
+            override fun onLongClick(v: View?): Boolean {
+                val dialogBuilder = AlertDialog.Builder(activity!!)
+                dialogBuilder.setMessage("Simple Quistoner for better lifestyle")
+                    // if the dialog is cancelable
+                    .setCancelable(false)
+                    .setPositiveButton("Got it", DialogInterface.OnClickListener {
+                            dialog, id ->
+                        dialog.dismiss()
+
+                    })
+
+                val alert = dialogBuilder.create()
+                alert.setTitle("Quistoner")
+                alert.show()
+
+                return true  }
+        })
+
+
 
         if (param3 == 0) {
             postToListIklan()
         }
         val viewPagerIklan : ViewPager2 = View.findViewById(R.id.viewIklan2)
 
-        viewPagerIklan.adapter = ViewPagerAdapterIklan(imageIklan)
+        viewPagerIklan.adapter = ViewPagerAdapterIklanVoc(imageIklan)
         viewPagerIklan.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-        val indicator : CircleIndicator3 = View.findViewById(R.id.indicatorIklan2)
-        indicator.setViewPager(viewPagerIklan)
-
-
+        val indicator : WormDotsIndicator = View.findViewById(R.id.indicatorIklan2)
+        indicator.setViewPager2(viewPagerIklan)
 
 
 
@@ -72,7 +104,7 @@ class voiceOfC : Fragment() {
     }
 
     private fun postToListIklan(){
-        addToListIklan( R.drawable.iklandummy1)
+        addToListIklan( R.drawable.iklan_voc)
         addToListIklan( R.drawable.coming_soon)
     }
 

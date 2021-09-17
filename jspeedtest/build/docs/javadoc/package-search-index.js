@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"fr.bmartel.speedtest"},{"l":"fr.bmartel.speedtest.inter"},{"l":"fr.bmartel.speedtest.model"},{"l":"fr.bmartel.speedtest.utils"}]
