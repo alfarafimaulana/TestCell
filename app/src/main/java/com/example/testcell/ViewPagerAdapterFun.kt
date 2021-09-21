@@ -8,10 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testcell.MainActivity
-import com.example.testcell.R
-import com.example.testcell.TestAct
-import com.example.testcell.opiniAct
+import com.example.testcell.*
 
 
 class ViewPagerAdapterFun(private var title: List<String>,private var Pilihan1: List<Int>, private var Pilihan2: List<Int>) : RecyclerView.Adapter<ViewPagerAdapterFun.pager2ViewHolder>() {
@@ -28,7 +25,7 @@ class ViewPagerAdapterFun(private var title: List<String>,private var Pilihan1: 
                 val position = adapterPosition
                 Toast.makeText(itemView.context, "${position+1} pertama", Toast.LENGTH_SHORT).show()
                 if (position == 0){
-                    val dashboardIntent = Intent(itemView.context, TestAct::class.java)
+                    val dashboardIntent = Intent(itemView.context, newTestAct::class.java)
                     itemView.context.startActivity(dashboardIntent)
                 }
                 if (position == 1){

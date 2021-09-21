@@ -12,10 +12,7 @@ import android.os.Build
 import android.os.Bundle
 import android.telephony.PhoneStateListener
 import android.telephony.TelephonyManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat.getSystemService
@@ -28,7 +25,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class TestAct : AppCompatActivity() {
+class newTestAct : AppCompatActivity() {
     private var telephonyManager: TelephonyManager? = null
     private val myPhoneStateListener: MyPhoneStateListener = MyPhoneStateListener()
     private var speedTestTask: SpeedTestViewModel = SpeedTestViewModel()
@@ -52,12 +49,14 @@ class TestAct : AppCompatActivity() {
     var uploadSpeedBg = ""
     var downloadSpeedBg = ""
 
+    var saveMode = 0
+
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_testone)
+        setContentView(R.layout.activity_new_testone)
         supportActionBar?.hide()
 
         telephonyManager = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
@@ -77,25 +76,18 @@ class TestAct : AppCompatActivity() {
 
 
 
-        val timeStamp: EditText = findViewById(R.id.timeStamp)
-        val operator: EditText = findViewById(R.id.operator)
-        val buildModel: EditText = findViewById(R.id.deviceModel)
-        val long: EditText = findViewById(R.id.longitude)
-        val lat: EditText = findViewById(R.id.latitude)
-        val uploadView: EditText = findViewById(R.id.upload)
-        val downloadView: EditText = findViewById(R.id.download)
 
 
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
 
 
-        val loc: Button = findViewById(R.id.loc2)
-        loc.setOnClickListener{
-            val longValue = long.text.toString()
-            val latValue = lat .text.toString()
-            viewLoc(latValue,longValue)
-        }
+//        val loc: Button = findViewById(R.id.loc2)
+//        loc.setOnClickListener{
+//            val longValue = long.text.toString()
+//            val latValue = lat .text.toString()
+//            viewLoc(latValue,longValue)
+//        }
 
 //        val refreshBtn: Button = findViewById(R.id.refresh2)
 //        refreshBtn.setOnClickListener {
@@ -112,19 +104,9 @@ class TestAct : AppCompatActivity() {
 //                speedBtn.isEnabled = true
 //            }
 //        }
-        val sumbitBtn: Button = findViewById(R.id.submitData2)
-        sumbitBtn.setOnClickListener {
-            val sumbitBtn: Button = findViewById(R.id.submitData2)
-            if (timeStamp.text.trim().isEmpty() && uploadView.text.trim().isEmpty() && downloadView.text.trim().isEmpty()){
-                Toast.makeText(this, "segera memulai test",Toast.LENGTH_SHORT).show()
-            }
-            else{
-                savedata()
-                sumbitBtn.isEnabled = false
-            }
-        }
 
-        val speedBtn: Button = findViewById(R.id.speed2)
+
+        val speedBtn: ImageView = findViewById(R.id.speed3)
         speedBtn.setOnClickListener {
             activeNetInfo = connectivityManager.activeNetworkInfo
             connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
@@ -134,13 +116,14 @@ class TestAct : AppCompatActivity() {
             }
             else{
                 if ( activeNetInfo != null ) {
-                    sumbitBtn.isEnabled = true
+                    timeStamp()
                     getLastLocation()
-                    timeStamp.setText(timeStamp())
                     operator()
                     model()
                     speedTestTask.runTest()
                     speedTestTask.runPing()
+                    saveMode = 1
+
                 }
 //                if (mobNetInfo != null) {
 //                    Toast.makeText(this, "Mobile Network Type : " + mobNetInfo.typeName, Toast.LENGTH_SHORT).show()
@@ -151,11 +134,6 @@ class TestAct : AppCompatActivity() {
                 }
             }
         }
-
-
-
-
-
         if (wifiManager!!.isWifiEnabled) {
             Toast.makeText(this, "Wifi terdeteksi, matikan wifi dan tekan refresh",Toast.LENGTH_SHORT).show()
             speedBtn.isEnabled = false
@@ -165,43 +143,41 @@ class TestAct : AppCompatActivity() {
         }
 
 
-
     }
 
 
     fun updateUploadSpeed(speed: BigDecimal) {
-        this@TestAct.runOnUiThread {
-            val uploadView: TextView = findViewById(R.id.upload)
-            uploadView.text = speed.toInt().toString()
+        this@newTestAct.runOnUiThread {
+            val up : TextView = findViewById(R.id.upText)
+            up.text = speed.toInt().toString()
             uploadSpeedBg = speed.toInt().toString()
 
         }
     }
     fun updateDownloadSpeed(speed: BigDecimal) {
-        this@TestAct.runOnUiThread {
-            val downloadView: TextView = findViewById(R.id.download)
-            downloadView.text = speed.toInt().toString()
+        this@newTestAct.runOnUiThread {
+            val down : TextView = findViewById(R.id.downText)
+            down.text = speed.toInt().toString()
             downloadSpeedBg = speed.toInt().toString()
         }
     }
     fun updateLatency(latency: Int) {
-        this@TestAct.runOnUiThread {
-            val latencyView: TextView = findViewById(R.id.latency)
-            latencyView.text = latency.toString()
+        this@newTestAct.runOnUiThread {
+            val ping : TextView = findViewById(R.id.pingLatText)
+            ping.text = latency.toString()
             latencyBg = latency.toString()
         }
     }
-
     fun updateBusy(busy: Boolean) {
-        this@TestAct.runOnUiThread {
-            val sumbitBtn: Button = findViewById(R.id.submitData2)
+        this@newTestAct.runOnUiThread {
+            val sumbitBtn: ImageView = findViewById(R.id.speed3)
             sumbitBtn.isEnabled = !busy
+            if (busy == false){
+                    savedata()
+            }
         }
     }
-
     fun updateSignal(strengthVal: Int) {
-        val strengthView: TextView = findViewById(R.id.signal)
-        strengthView.text = strengthVal.toString()
         signalBg = strengthVal.toString()
     }
 
@@ -214,9 +190,7 @@ class TestAct : AppCompatActivity() {
     }
 
     fun operator() {
-        val operatorView: TextView = findViewById(R.id.operator)
         val operatorName = telephonyManager?.networkOperatorName
-        operatorView.text = operatorName.toString()
         opBg = operatorName.toString()
     }
 
@@ -224,9 +198,6 @@ class TestAct : AppCompatActivity() {
         var manu = Build.MANUFACTURER
         var model = Build.MODEL
         var build = "$manu $model"
-
-        val buildModel: TextView = findViewById(R.id.deviceModel)
-        buildModel.text = build
         modelBg = build
     }
 
@@ -237,14 +208,10 @@ class TestAct : AppCompatActivity() {
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
         startActivity(mapIntent)
-
-
     }
 
 
     fun getLastLocation() {
-        val long: TextView = findViewById(R.id.longitude)
-        val lat: TextView = findViewById(R.id.latitude)
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -256,9 +223,6 @@ class TestAct : AppCompatActivity() {
                 .addOnSuccessListener { location: Location? ->
                     mLocation = location
                     if (location != null) {
-                        lat.text = location.latitude.toString()
-                        long.text = location.longitude.toString()
-
                         latBg = location.latitude.toString()
                         longBg = location.longitude.toString()
                     }
@@ -270,44 +234,41 @@ class TestAct : AppCompatActivity() {
 
         database = FirebaseDatabase.getInstance().getReference("data")
         var mode = 2
-        if (mode == 1) {
-
-        val timeStamp: TextView = findViewById(R.id.timeStamp)
-        val operator: TextView = findViewById(R.id.operator)
-        val buildModel: TextView = findViewById(R.id.deviceModel)
-        val long: TextView = findViewById(R.id.longitude)
-        val lat: TextView = findViewById(R.id.latitude)
-        val signalStr: TextView = findViewById(R.id.signal)
-        val late: TextView = findViewById(R.id.latency)
-        val uploadView: TextView = findViewById(R.id.upload)
-        val downloadView: TextView = findViewById(R.id.download)
-
-
-        val dataid = database.push().key
-        val TimeStamp = timeStamp.text.toString()
-        val Operator = operator.text.toString()
-        val Model = buildModel.text.toString()
-        val Longitude = long.text.toString()
-        val Latitude = lat.text.toString()
-        val Signal = signalStr.text.toString()
-        val Latency = late.text.toString()
-        val UploadSpeed = uploadView.text.toString()
-        val DownloadSpeed = downloadView.text.toString()
-
-        val data = Data(dataid.toString(),TimeStamp,Operator,Model,Longitude,Latitude,Signal,Latency,UploadSpeed,DownloadSpeed)
-        database.child(dataid.toString()).setValue(data).addOnSuccessListener {
-            Toast.makeText(this, "Terima kasih atas masukannya",Toast.LENGTH_SHORT).show()
-        }.addOnFailureListener {
-            Toast.makeText(this, "Failed",Toast.LENGTH_SHORT).show()}
+//        if (mode == 1) {
+//
+//        val timeStamp: TextView = findViewById(R.id.timeStamp)
+//        val operator: TextView = findViewById(R.id.operator)
+//        val buildModel: TextView = findViewById(R.id.deviceModel)
+//        val long: TextView = findViewById(R.id.longitude)
+//        val lat: TextView = findViewById(R.id.latitude)
+//        val signalStr: TextView = findViewById(R.id.signal)
+//        val late: TextView = findViewById(R.id.latency)
+//        val uploadView: TextView = findViewById(R.id.upload)
+//        val downloadView: TextView = findViewById(R.id.download)
+//
+//
+//        val dataid = database.push().key
+//        val TimeStamp = timeStamp.text.toString()
+//        val Operator = operator.text.toString()
+//        val Model = buildModel.text.toString()
+//        val Longitude = long.text.toString()
+//        val Latitude = lat.text.toString()
+//        val Signal = signalStr.text.toString()
+//        val Latency = late.text.toString()
+//        val UploadSpeed = uploadView.text.toString()
+//        val DownloadSpeed = downloadView.text.toString()
+//
+//        val data = Data(dataid.toString(),TimeStamp,Operator,Model,Longitude,Latitude,Signal,Latency,UploadSpeed,DownloadSpeed)
+//        database.child(dataid.toString()).setValue(data).addOnSuccessListener {
+//            Toast.makeText(this, "Terima kasih atas masukannya",Toast.LENGTH_SHORT).show()
+//        }.addOnFailureListener {
+//            Toast.makeText(this, "Failed",Toast.LENGTH_SHORT).show()}
 //        .addOnCompleteListener{
 //            val signInIntent = Intent(this, MainActivity::class.java)
 //            startActivity(signInIntent)
 //            finish()
 //        }
 
-
-
-        }
         if(mode == 2){
 
             val dataid = database.push().key
@@ -327,12 +288,15 @@ class TestAct : AppCompatActivity() {
             }.addOnFailureListener {
                 Toast.makeText(this, "Failed",Toast.LENGTH_SHORT).show()}
 //            .addOnCompleteListener{
-//                val signInIntent = Intent(this, MainActivity::class.java)
-//                startActivity(signInIntent)
+////
 //                finish()
 //            }
 
         }
+    }
+
+    fun startProcess(){
+
     }
 
 

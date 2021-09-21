@@ -34,6 +34,10 @@
             android:name=".TestAct"
             android:label="@string/title_activity_test"
             android:theme="@style/Theme.TestCell.NoActionBar" />
+        <activity
+            android:name=".newTestAct"
+            android:label="@string/title_activity_test"
+            android:theme="@style/Theme.TestCell.NoActionBar" />
         <activity android:name=".MainActivity" />
 
         <meta-data

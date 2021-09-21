@@ -85,7 +85,7 @@ class voiceOfCustomer : AppCompatActivity() {
     }
 
     private fun postToListFun(){
-        addToListFun("Test Cell",R.mipmap.signal_round, R.mipmap.opini_round)
-        addToListFun("Quistioner",R.drawable.coming_soon, R.drawable.coming_soon)
+        addToListFun("For Better Quality Internet",R.mipmap.signal_round, R.mipmap.opini_round)
+        addToListFun("For Better Lifestyle",R.drawable.coming_soon, R.drawable.coming_soon)
     }
 }
