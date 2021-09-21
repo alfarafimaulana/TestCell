@@ -288,7 +288,6 @@ class newTestAct : AppCompatActivity() {
             }.addOnFailureListener {
                 Toast.makeText(this, "Failed",Toast.LENGTH_SHORT).show()}
 //            .addOnCompleteListener{
-////
 //                finish()
 //            }
 
