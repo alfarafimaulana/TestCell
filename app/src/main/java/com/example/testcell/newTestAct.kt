@@ -134,15 +134,6 @@ class newTestAct : AppCompatActivity() {
                 }
             }
         }
-        if (wifiManager!!.isWifiEnabled) {
-            Toast.makeText(this, "Wifi terdeteksi, matikan wifi dan tekan refresh",Toast.LENGTH_SHORT).show()
-            speedBtn.isEnabled = false
-        }
-        else{
-            speedBtn.isEnabled = true
-        }
-
-
     }
 
 
