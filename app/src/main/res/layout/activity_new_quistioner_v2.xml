@@ -54,7 +54,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView19"
         app:layout_constraintVertical_bias="0.0">
@@ -65,25 +65,12 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="0dp"
-                android:layout_height="125dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/bg_menu" />
-
-            <ImageView
                 android:id="@+id/imageView20"
                 android:layout_width="0dp"
-                android:layout_height="125dp"
-                android:layout_marginStart="8dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -93,28 +80,109 @@
             <ImageView
                 android:id="@+id/imageView28"
                 android:layout_width="0dp"
-                android:layout_height="125dp"
-                android:layout_marginStart="8dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView20"
                 app:srcCompat="@drawable/bg_menu" />
 
+            <CheckBox
+                android:id="@+id/cBox32kali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="dibbawah 2 kali"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView28"
+                app:layout_constraintStart_toStartOf="@+id/textView30"
+                app:layout_constraintTop_toBottomOf="@+id/textView30"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/cBox3Sampai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 - 5 kali"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView28"
+                app:layout_constraintStart_toStartOf="@+id/cBox32kali"
+                app:layout_constraintTop_toBottomOf="@+id/cBox32kali"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/cBox35kali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="diatas 5 kali"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView28"
+                app:layout_constraintStart_toStartOf="@+id/cBox3Sampai"
+                app:layout_constraintTop_toBottomOf="@+id/cBox3Sampai"
+                app:layout_constraintVertical_bias="0.0" />
+
             <ImageView
                 android:id="@+id/imageView32"
                 android:layout_width="0dp"
-                android:layout_height="125dp"
-                android:layout_marginStart="8dp"
+                android:layout_height="220dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView28"
                 app:srcCompat="@drawable/bg_menu" />
+
+            <CheckBox
+                android:id="@+id/cBox42juta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="dibawah 2 juta rupiah"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView32"
+                app:layout_constraintStart_toStartOf="@+id/textView33"
+                app:layout_constraintTop_toBottomOf="@+id/textView33"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/cBox45juta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="188dp"
+                android:text="diatas 5 juta rupiah"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView32"
+                app:layout_constraintEnd_toEndOf="@+id/imageView32"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cBox4Sampai"
+                app:layout_constraintTop_toBottomOf="@+id/cBox4Sampai"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/cBox4Sampai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="110dp"
+                android:layout_marginBottom="34dp"
+                android:text="2 - 5 juta rupiah"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView32"
+                app:layout_constraintEnd_toEndOf="@+id/imageView32"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cBox42juta"
+                app:layout_constraintTop_toBottomOf="@+id/cBox42juta"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/textView33"
@@ -123,30 +191,31 @@
                 android:text="Berapa yang anda habiskan untuk berbelanja sebulan?"
                 android:textColor="#000000"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView32"
                 app:layout_constraintEnd_toEndOf="@+id/imageView32"
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="@+id/imageView32"
-                app:layout_constraintTop_toBottomOf="@+id/imageView28"
-                app:layout_constraintVertical_bias="0.3" />
+                app:layout_constraintTop_toTopOf="@+id/imageView32"
+                app:layout_constraintVertical_bias="0.15" />
 
             <ImageView
                 android:id="@+id/imageView26"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView18"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/bg_menu" />
 
             <TextView
                 android:id="@+id/textView31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Berapa penghasilan anda pertahun?"
                 android:textColor="#000000"
                 android:textSize="12sp"
@@ -155,7 +224,7 @@
                 app:layout_constraintHorizontal_bias="0.26"
                 app:layout_constraintStart_toStartOf="@+id/imageView20"
                 app:layout_constraintTop_toTopOf="@+id/imageView20"
-                app:layout_constraintVertical_bias="0.165" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/textView30"
@@ -172,77 +241,6 @@
                 app:layout_constraintVertical_bias="0.146" />
 
             <TextView
-                android:id="@+id/textView29"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Seberapa puas anda dengan jaringan operator anda?"
-                android:textColor="#000000"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView18"
-                app:layout_constraintEnd_toEndOf="@+id/imageView18"
-                app:layout_constraintStart_toStartOf="@+id/imageView18"
-                app:layout_constraintTop_toTopOf="@+id/imageView18"
-                app:layout_constraintVertical_bias="0.201" />
-
-            <RatingBar
-                android:id="@+id/ratingBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/boxlogin"
-                android:scrollbarThumbHorizontal="@color/dark_purple"
-                android:scrollbarThumbVertical="@color/dark_purple"
-                android:scrollbarTrackHorizontal="@color/dark_purple"
-                android:scrollbarTrackVertical="@color/dark_purple"
-                app:layout_constraintEnd_toEndOf="@+id/textView29"
-                app:layout_constraintHorizontal_bias="0.466"
-                app:layout_constraintStart_toStartOf="@+id/textView29"
-                app:layout_constraintTop_toBottomOf="@+id/textView29" />
-
-            <Spinner
-                android:id="@+id/spGaji"
-                android:layout_width="0dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/boxlogin"
-                android:dropDownSelector="@drawable/bgprofile2"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView20"
-                app:layout_constraintEnd_toEndOf="@+id/imageView20"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/imageView20"
-                app:layout_constraintTop_toBottomOf="@+id/textView31"
-                app:layout_constraintVertical_bias="0.301" />
-
-            <Spinner
-                android:id="@+id/spGaji2"
-                android:layout_width="0dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/boxlogin"
-                android:dropDownSelector="@drawable/bgprofile2"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView28"
-                app:layout_constraintEnd_toEndOf="@+id/imageView28"
-                app:layout_constraintStart_toStartOf="@+id/imageView28"
-                app:layout_constraintTop_toBottomOf="@+id/textView30"
-                app:layout_constraintVertical_bias="0.309" />
-
-            <Spinner
-                android:id="@+id/spGaji3"
-                android:layout_width="0dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/boxlogin"
-                android:dropDownSelector="@drawable/bgprofile2"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView32"
-                app:layout_constraintEnd_toEndOf="@+id/imageView32"
-                app:layout_constraintStart_toStartOf="@+id/imageView32"
-                app:layout_constraintTop_toBottomOf="@+id/textView33"
-                app:layout_constraintVertical_bias="0.3" />
-
-            <TextView
                 android:id="@+id/textView32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -256,30 +254,75 @@
                 app:layout_constraintTop_toTopOf="@+id/imageView26"
                 app:layout_constraintVertical_bias="0.154" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName3"
-                android:layout_width="192dp"
-                android:layout_height="28dp"
-                android:background="@drawable/boxlogin"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView26"
-                app:layout_constraintEnd_toEndOf="@+id/imageView26"
-                app:layout_constraintHorizontal_bias="0.256"
-                app:layout_constraintStart_toStartOf="@+id/imageView26"
-                app:layout_constraintTop_toBottomOf="@+id/textView32"
-                app:layout_constraintVertical_bias="0.348" />
-
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/sumbitButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Button"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imageView32"
                 app:layout_constraintStart_toStartOf="@+id/imageView32"
                 app:layout_constraintTop_toBottomOf="@+id/imageView32" />
+
+            <EditText
+                android:id="@+id/kodePosText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boxlogin"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+                app:layout_constraintEnd_toEndOf="@+id/imageView26"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView32"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            <CheckBox
+                android:id="@+id/cBox260juta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="dibawah 60 juta rupiah"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+                app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView31"
+                app:layout_constraintTop_toBottomOf="@+id/textView31"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/cBox2Sampai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60 - 120 juta rupiah"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+                app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView31"
+                app:layout_constraintTop_toBottomOf="@+id/cBox260juta"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/cBox2120juta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="diatas 120 juta rupiah"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+                app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView31"
+                app:layout_constraintTop_toBottomOf="@+id/cBox2Sampai"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

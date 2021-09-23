@@ -23,7 +23,7 @@ class ViewPagerAdapterIklanVoc(private var images: List<Int>) : RecyclerView.Ada
 
         init {
             itemImage.setOnClickListener {
-                val gmmIntentUri = Uri.parse("geo:0,0?q=restaurants")
+                val gmmIntentUri = Uri.parse("geo:0,0?q=Burger")
                 val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
                 mapIntent.setPackage("com.google.android.apps.maps")
                 itemView.context.startActivity(mapIntent)
