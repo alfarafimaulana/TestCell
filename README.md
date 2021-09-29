@@ -1,7 +1,6 @@
-## TODO list
+## App Description
 # Menu interface
-- UI tut
-- UI function pick
+
 
 # UI Overhaul
 - Main
