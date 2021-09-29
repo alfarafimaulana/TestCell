@@ -1,5 +1,8 @@
 # App Description
+The main function this app are :
 
+1. Cellular Test Speed
+2. Targeted Ad
 
 ## Login Interface
 
@@ -24,8 +27,23 @@
 
 ## Cellular Speed Test
 
-<img src="https://github.com/alfarafimaulana/TestCell/blob/master/Foto%20Git/Screenshot_2021-09-29-17-31-08-94_9eaad7d0d1be446f448c1d6044958e42.jpg" width="250">
+<img src="https://github.com/alfarafimaulana/TestCell/blob/master/Foto%20Git/Screenshot_2021-09-29-17-31-08-94_9eaad7d0d1be446f448c1d6044958e42.jpg" width="250"><img src="https://github.com/alfarafimaulana/TestCell/blob/master/Foto%20Git/previous.PNG" width="250">
 
-- This is the Cellular speed test
+- This is the Cellular speed test activity, previous version is on the right, the left is the simplified versons, it has only one button to do every functions from the old ones, from determining the user longitude, latitude, their phone model, operator, and timestamp.
+
+## This is the Qustioner
+
+<img src="https://github.com/alfarafimaulana/TestCell/blob/master/Foto%20Git/Screenshot_2021-09-29-17-31-03-56_9eaad7d0d1be446f448c1d6044958e42.jpg" width="250"><img src="https://github.com/alfarafimaulana/TestCell/blob/master/Foto%20Git/Screenshot_2021-09-29-22-24-57-66_9eaad7d0d1be446f448c1d6044958e42.jpg" width="250">
+
+- This is the qustioner activity, there are 2 of them the first one is the Voice of Customer Qustioner, this is the extended from the targeted ad functions, the second one is for the operator review from the customer
+
+<img src="https://github.com/alfarafimaulana/TestCell/blob/master/Foto%20Git/HasilQustioner.PNG" width="700">
+
+- This is the result for the Voice of Customer Qustioner, the result can be json and excel. 
+
+# THe video Demonstrations
+
+https://www.youtube.com/watch?v=w2kRuX_zjqw
+
 
   
