@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.google.firebase.database.FirebaseDatabase
 
 class newQuistionerV2 : AppCompatActivity() {
 
@@ -145,20 +146,46 @@ class newQuistionerV2 : AppCompatActivity() {
 
         submit.setOnClickListener {
             kodePos = kodePosText.toString()
+            val database = FirebaseDatabase.getInstance().getReference("data")
+
+
+
 
             if (kodePos.trim().isEmpty() && penghasilan.trim().isEmpty() && xBelanja.trim().isEmpty() && !uangBelanja.trim().isEmpty()){
                 Toast.makeText(this, "Harap mengisi semua pertanyaan", Toast.LENGTH_SHORT).show()
             }
             else{
                 Toast.makeText(this, "Berhasil", Toast.LENGTH_SHORT).show()
-            }
-
-
 
 
             }
 
 
+
+
+            }
+
+
+//        database = FirebaseDatabase.getInstance().getReference("data")
+//        var mode = 2
+//        if (mode == 1) {
+
+//            val dataid = database.push().key
+//            val TimeStamp = timeStamp.text.toString()
+//            val Operator = operator.text.toString()
+//            val Model = buildModel.text.toString()
+//            val Longitude = long.text.toString()
+//            val Latitude = lat.text.toString()
+//            val Signal = signalStr.text.toString()
+//            val Latency = late.text.toString()
+//            val UploadSpeed = uploadView.text.toString()
+//            val DownloadSpeed = downloadView.text.toString()
+//
+//            val data = Data(dataid.toString(),TimeStamp,Operator,Model,Longitude,Latitude,Signal,Latency,UploadSpeed,DownloadSpeed)
+//            database.child(dataid.toString()).setValue(data).addOnSuccessListener {
+//                Toast.makeText(this, "Terima kasih atas masukannya",Toast.LENGTH_SHORT).show()
+//            }.addOnFailureListener {
+//                Toast.makeText(this, "Failed",Toast.LENGTH_SHORT).show()}
 
 
 
