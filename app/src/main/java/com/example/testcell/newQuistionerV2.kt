@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class newQuistionerV2 : AppCompatActivity() {
 
@@ -13,10 +17,18 @@ class newQuistionerV2 : AppCompatActivity() {
     var xBelanja = ""
     var uangBelanja = ""
 
+
+    private lateinit var database : DatabaseReference
+    private lateinit var mAuth: FirebaseAuth
+    val db = Firebase.firestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_quistioner_v2)
         supportActionBar?.hide()
+
+
+        mAuth = FirebaseAuth.getInstance()
 
         val kodePosText : EditText = findViewById(R.id.kodePosText)
 
@@ -145,8 +157,8 @@ class newQuistionerV2 : AppCompatActivity() {
 
 
         submit.setOnClickListener {
-            kodePos = kodePosText.toString()
-            val database = FirebaseDatabase.getInstance().getReference("data")
+            kodePos = kodePosText.text.toString()
+
 
 
 
@@ -155,6 +167,8 @@ class newQuistionerV2 : AppCompatActivity() {
                 Toast.makeText(this, "Harap mengisi semua pertanyaan", Toast.LENGTH_SHORT).show()
             }
             else{
+                saveFirestore()
+                saveRealtime()
                 Toast.makeText(this, "Berhasil", Toast.LENGTH_SHORT).show()
 
 
@@ -166,26 +180,6 @@ class newQuistionerV2 : AppCompatActivity() {
             }
 
 
-//        database = FirebaseDatabase.getInstance().getReference("data")
-//        var mode = 2
-//        if (mode == 1) {
-
-//            val dataid = database.push().key
-//            val TimeStamp = timeStamp.text.toString()
-//            val Operator = operator.text.toString()
-//            val Model = buildModel.text.toString()
-//            val Longitude = long.text.toString()
-//            val Latitude = lat.text.toString()
-//            val Signal = signalStr.text.toString()
-//            val Latency = late.text.toString()
-//            val UploadSpeed = uploadView.text.toString()
-//            val DownloadSpeed = downloadView.text.toString()
-//
-//            val data = Data(dataid.toString(),TimeStamp,Operator,Model,Longitude,Latitude,Signal,Latency,UploadSpeed,DownloadSpeed)
-//            database.child(dataid.toString()).setValue(data).addOnSuccessListener {
-//                Toast.makeText(this, "Terima kasih atas masukannya",Toast.LENGTH_SHORT).show()
-//            }.addOnFailureListener {
-//                Toast.makeText(this, "Failed",Toast.LENGTH_SHORT).show()}
 
 
 
@@ -254,5 +248,55 @@ class newQuistionerV2 : AppCompatActivity() {
 
 
         
+    }
+
+    private fun saveRealtime() {
+        database = FirebaseDatabase.getInstance().getReference("Qustioner")
+        var mode = 1
+        if (mode == 1) {
+
+            val dataid = database.push().key
+            val kodePos = kodePos.toString()
+            val penghasilan = penghasilan.toString()
+            val xBelanja = xBelanja.toString()
+            val uangBelanja = uangBelanja.toString()
+
+
+            val Qustioner = DataQuistioner(
+                dataid.toString(),
+                kodePos,
+                penghasilan,
+                xBelanja,
+                uangBelanja,
+            )
+            database.child(dataid.toString()).setValue(Qustioner).addOnSuccessListener {
+                Toast.makeText(this, "Terima kasih atas masukannya", Toast.LENGTH_SHORT)
+                    .show()
+            }.addOnFailureListener {
+                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            }.addOnCompleteListener{
+                finish() }
+        }
+    }
+
+    private fun saveFirestore() {
+
+
+        val user = hashMapOf(
+            "Kode Pos" to "$kodePos",
+            "penghasilan" to "$penghasilan",
+            "Pergi Belanja Per minggu" to "$xBelanja",
+            "Uang Belanja Per bulan" to "$uangBelanja",
+
+            )
+
+// Add a new document with a generated ID
+        db.collection("Quistioner").add(user)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Terima kasih atas masukannya", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            }
     }
 }

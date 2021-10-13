@@ -28,6 +28,8 @@ class newProfile : Fragment() {
     private var param2: String? = null
     private lateinit var mAuth: FirebaseAuth
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -44,8 +46,11 @@ class newProfile : Fragment() {
         mAuth = FirebaseAuth.getInstance()
         val currentUser = mAuth.currentUser
         val namaUser : TextView = view.findViewById(R.id.namaUs)
+        val email_txt : TextView = view.findViewById(R.id.emailText)
 
         namaUser.text = currentUser?.displayName
+        email_txt.text = currentUser?.email
+
         val gambarUserProfile : CircleImageView = view.findViewById(R.id.gambarUserProfile)
         Glide.with(this).load(currentUser?.photoUrl).into(gambarUserProfile)
 

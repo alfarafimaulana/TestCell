@@ -104,9 +104,8 @@ class voiceOfC : Fragment() {
     }
 
     private fun postToListIklan(){
-        addToListIklan( R.drawable.iklan_voc_2)
-        addToListIklan( R.drawable.iklan_voc)
-        addToListIklan( R.drawable.coming_soon)
+        addToListIklan(R.drawable.iklan_burger_baru)
+        addToListIklan(R.drawable.iklan_burger_kedua)
     }
 
 

@@ -28,6 +28,12 @@ class ViewPagerAdapterIklan( private var images: List<Int>) : RecyclerView.Adapt
                     openURL.data = Uri.parse("https://www.inews.id/techno/telco/cara-mengaktifkan-paket-belajar-telkomsel")
                     itemView.context.startActivity(openURL)
                 }
+                if(position == 1){
+                    val openURL = Intent(android.content.Intent.ACTION_VIEW)
+                    openURL.data = Uri.parse("https://www.kompas.com/tren/read/2021/09/25/103000465/telkom-siap-ganti-rugi-akibat-gangguan-internet-indihome")
+                    itemView.context.startActivity(openURL)
+                }
+
 
             }
         }

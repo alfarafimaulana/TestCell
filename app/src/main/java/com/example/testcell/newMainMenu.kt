@@ -59,10 +59,24 @@ class newMainMenu : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val View = inflater.inflate(R.layout.fragment_new_main_menu, container, false)
+        val View = inflater.inflate(R.layout.fragment_new_main_menu_v2, container, false)
         val gambarUser : ImageView = View.findViewById(R.id.gambarUser2)
         mAuth = FirebaseAuth.getInstance()
         val currentUser = mAuth.currentUser
+
+
+        val testCell : ImageView = View.findViewById(R.id.testCell)
+        testCell.setOnClickListener{
+            val dashboardIntent = Intent(getActivity(), newTestAct::class.java)
+            getActivity()?.startActivity(dashboardIntent)
+        }
+
+
+        val opiniFun : ImageView = View.findViewById(R.id.opiniFun)
+        opiniFun.setOnClickListener{
+            val dashboardIntent = Intent(getActivity(), opiniAct::class.java)
+            getActivity()?.startActivity(dashboardIntent)
+        }
 
 
         if (param3 == 0) {
@@ -75,10 +89,10 @@ class newMainMenu : Fragment() {
 
 
 
-        val viewPagerFun : ViewPager2 = View.findViewById(R.id.viewPagerFun)
-
-        viewPagerFun.adapter = ViewPagerAdapterFun(sambutanFun,pilihan1,pilihan2)
-        viewPagerFun.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+//        val viewPagerFun : ViewPager2 = View.findViewById(R.id.viewPagerFun)
+//
+//        viewPagerFun.adapter = ViewPagerAdapterFun(sambutanFun,pilihan1,pilihan2)
+//        viewPagerFun.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         val viewPagerIklan : ViewPager2 = View.findViewById(R.id.viewPagerIklan)
 
@@ -86,7 +100,7 @@ class newMainMenu : Fragment() {
         viewPagerIklan.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         val indicator : CircleIndicator3 = View.findViewById(R.id.indicatorFun)
-        indicator.setViewPager(viewPagerFun)
+        indicator.setViewPager(viewPagerIklan)
 
         
 
@@ -106,7 +120,7 @@ class newMainMenu : Fragment() {
 
     private fun postToListIklan(){
         addToListIklan( R.drawable.iklan_cell)
-        addToListIklan( R.drawable.coming_soon)
+        addToListIklan(R.drawable.iklan_sobat_bagus)
     }
 
     private fun postToListFun(){

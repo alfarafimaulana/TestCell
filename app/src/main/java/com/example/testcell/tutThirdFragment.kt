@@ -42,7 +42,7 @@ class tutThirdFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_tut_third, container, false);
         val finishTut : FloatingActionButton = view.findViewById(R.id.finishTut)
         finishTut.setOnClickListener {
-            val dashboardIntent = Intent(getActivity(), pickFunction::class.java)
+            val dashboardIntent = Intent(getActivity(), new_menu::class.java)
             getActivity()?.startActivity(dashboardIntent)
             getActivity()?.finish()
         }

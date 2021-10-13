@@ -8,8 +8,8 @@
                 android:angle="270"
                 ></gradient>
             <corners
-                android:topLeftRadius="45dp"
-                android:topRightRadius="45dp"
+                android:topLeftRadius="30dp"
+                android:topRightRadius="30dp"
                 />
         </shape>
 
