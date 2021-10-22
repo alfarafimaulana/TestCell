@@ -4,6 +4,9 @@ The main function this app are :
 1. Cellular Test Speed
 2. Targeted Ad
 
+# Figma Demo
+https://www.figma.com/proto/GFoA8NIouDO14r9ZVTfkog/Untitled?node-id=235%3A29&scaling=scale-down&page-id=0%3A1&starting-point-node-id=235%3A29&show-proto-sidebar=1
+
 ## Login Interface
 
 <img src="https://github.com/alfarafimaulana/TestCell/blob/master/Foto%20Git/Screenshot_2021-09-29-17-30-36-40_9eaad7d0d1be446f448c1d6044958e42.jpg" width="250">
